@@ -12,7 +12,9 @@
     <title>Document</title>
 </head>
 <body>
-        <h1>Discussion Page</h1>
+        <h1>Annoucement</h1>
+        <br>
+        <br>
         <table style="width:100%">
         
             <?php
@@ -20,19 +22,15 @@
                 ?>
                 <div>
                     <div>
-                    <h1><?php echo $row['D_Id'];?></h1>
-                    <br>
+                    <h2><?php echo $row['D_Id'];?> <?php echo $row['D_Name'];?></h2>
                     </div>
                     <?php echo "Subject: "?>
                     <?php echo $row['Subject'];?><br>
                     <?php echo "Semester: "?>
-                    <?php echo $row['Semester'];?><br>
-                    <?php echo "Doubt Name: "?>
-                    <?php echo $row['D_Name'];?><br>
+                    <?php echo $row['Semester'];?><br>                   
                     <p>
                     <?php echo $row['Doubt'];?><br>
                     </p>
-                    <a href="UploadAnswer.php">Answer</a>
                 </div>
         
                 <?php
