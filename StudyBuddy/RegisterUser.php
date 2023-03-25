@@ -1,3 +1,6 @@
+<?php
+     $conn=mysqli_connect('sql12.freesqldatabase.com','sql12608210','fBXhWL98H4','sql12608210') or die("Connection failed" .mysqli_connect_error());
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +11,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bgimg"> </div>
-    <div class="bgtext">
-
-
-
+<?php
+    if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
+        if(isset($_POST['name'])&& isset($_POST['Roll_Number']) && isset($_POST['Semester']) && isset($_POST['password'])){
+        $name=$_POST['name'];
+        $rollnumber=$_POST['Roll_Number'];
+        $semester=$_POST['Semester'];
+        $password=$_POST['password'];
+        if($semester <= 8 && ctype_alpha($name)==true){
+            $sql="INSERT INTO  Student VALUES ('$rollnumber','$name','$semester','$password')";
+            $query =mysqli_query($conn,$sql);
+            if($query){
+                
+                header("Location: UserLogin.php");
+            }
+            else{
+                echo 'Value exists';
+            }
+        }
+        else{
+            echo 'Invalid input';
+        }
+    }
+}
+?>
         <h1>Register New User</h1>    
-        <form action="" method="POST">
+        <form action="RegisterUser.php" method="POST">
             <label for="name">Name:</label><br>
             <input  type="text" name="name" id="name" required placeholder="Name"><br><br>
             <label for="Roll_Number">Roll_Number:</label><br>
