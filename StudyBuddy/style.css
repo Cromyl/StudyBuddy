@@ -1,7 +1,155 @@
-body {
-    text-align: center;
+html {
+
+    height: 100%;
+    margin: auto;
+    padding: auto;
+    background-color: black;
 }
 
-form {
+* {
+    box-sizing: border-box;
+}
+
+.bgimg {
+    /* The image used */
+    background-image: url("img.jpg");
+
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.719);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat repeat;
+    background-size: cover;
+}
+
+.bgtext {
+    max-height: 100%;
+    border-radius: 50px;
+    /* background-color: rgb(0, 0, 0); */
+    /* Fallback color */
+    /* background-color: rgba(0, 0, 0, 0.404); */
+    /* Black w/opacity/see-through */
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.bgtext a {
+    text-decoration: none;
+    color: #f1f1f1;
+
+}
+
+.bgtext table {
+    margin: auto;
+    border: 3px solid #f1f1f1;
+    border-radius: 20px;
+
+}
+
+.bgtext tr {
+    margin: auto;
+    border: 3px solid #f1f1f1;
+    border-radius: 20px;
+
+}
+
+.bgtext input[type=text],
+select {
+    font-size: large;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
     display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.bgtext input[type=number],
+select {
+    font-size: large;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.bgtext input[type=password],
+select {
+    font-size: large;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.bgtext input[type=date],
+select {
+    font-size: large;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.bgtext input[type=submit] {
+    font-size: large;
+    width: 125px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bgtext input[type=submit] :hover {
+    background-color: #256427;
+}
+
+.regForm {
+    height: 80%;
+    border-radius: 50px;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.466);
+    /* Black w/opacity/see-through */
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
 }
