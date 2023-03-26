@@ -32,7 +32,10 @@
                     <p>
                     <?php echo $row['Doubt'];?><br>
                     </p>
-                    <a href="UploadAnswer.php">Answer</a>
+                    <?php
+                    $id=$row['D_Id'];
+                    echo "<a href=post.php?id=$id>Answer</a>";
+                    ?>
                 </div>
         
                 <?php

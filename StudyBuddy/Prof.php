@@ -9,7 +9,7 @@
 <body>
     <div>
     <h4>Welcome!!</h4>
-    <a href="Announcement.php">Announcements</a><br>
+    <a href="Annoucement.php">Announcements</a><br>
     <a href="UploadMaterial.php">Upload Material</a><br>
     <a href="DiscussionPage.php">View Discussions</a><br>
     <a href="DeleteDiscussion.php">Delete Discussion</a><br>
