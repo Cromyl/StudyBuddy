@@ -78,7 +78,7 @@
                             </div>
                             <br>
                             <div class="d-grid">
-                                <input class="btn btn-primary btn-lg disabled" type="submit" name="submit" id="submit">
+                                <input class="btn btn-primary btn-lg" type="submit" name="submit" id="submit">
                             </div>
                               
                         </form>
