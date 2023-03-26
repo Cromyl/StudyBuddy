@@ -22,15 +22,17 @@
                 ?>
                 <div>
                     <div>
+                    <h2>Hey there !! A new question is uploaded..Go and check out..</h2>
                     <h2><?php echo $row['D_Id'];?> <?php echo $row['D_Name'];?></h2>
                     </div>
                     <?php echo "Subject: "?>
                     <?php echo $row['Subject'];?><br>
                     <?php echo "Semester: "?>
-                    <?php echo $row['Semester'];?><br>                   
-                    <p>
-                    <?php echo $row['Doubt'];?><br>
-                    </p>
+                    <?php echo $row['Semester'];?><br>          
+                    <?php
+                    $id=$row['D_Id'];
+                    echo "<a href=post.php?id=$id>Answer</a>";
+                    ?>
                 </div>
         
                 <?php
