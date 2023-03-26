@@ -58,7 +58,7 @@
                     
                     <?php
                     $id=$row['D_Id'];
-                    echo "<button class=\"btn btn-primary btn-lg\"><a style=\"color:white\" href=post.php?id=$id>Answer</a></button>";
+                    echo "<button class=\"btn btn-primary btn-lg \"><a class=\"text-decoration-none\" style=\"color:white\" href=post.php?id=$id>Answer</a></button>";
                     ?>
                 
         
