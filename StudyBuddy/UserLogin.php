@@ -10,11 +10,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
 
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#!">StudyBuddy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                          </ul>
+                </div>
+            </div>
+        </nav>
 <?php
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $id=$_POST['ID'];
@@ -48,30 +58,42 @@
         }
     }
 ?>
-    <div style="margin-top:100px ">
-        <h1>Login</h1>   
-        <form action="UserLogin.php" method="POST">
-            <div class="mb-3" style="margin-bottom: -2rem!important">
-                <label for="name"  class="form-label">User ID</label><br>
-                <input class="form-control" type="text" name="ID" id="ID" required placeholder="ID"><br><br>
-        
-            </div>
-            <div class="mb-3"style="margin-bottom: -2rem!important">
-        
-                <label for="password"class="form-label">Password</label><br>
-                <input class="form-control" type="password" name="password" id="password" required placeholder="Password"><br><br>
-                
-            </div>
-            
-              <input class="btn btn-primary" type="submit" name="submit" id="submit">
-              
-        </form>
-    </div>
+    <section class="bg-light py-5">
+        <div class="container px-5 my-5 px-5">
+            <div class="text-center mb-5">
+              <h2 class="fw-bolder">LOGIN</h2><br><br>
 
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-4">
+                        <form action="UserLogin.php" method="POST">
+                            <div class="mb-3 form-floating" >
+                                <input class="form-control" type="text" name="ID" id="ID" required placeholder="ID">
+                                <label for="name"  class="form-label">User ID</label>
+                        
+                            </div>
+                            <div class="mb-3 form-floating">                        
+                                <input class="form-control" type="password" name="password" id="password" required placeholder="Password">
+                                <label for="password"class="form-label">Password</label>
+                                
+                            </div>
+                            <br>
+                            <div class="d-grid">
+                                <input class="btn btn-primary btn-lg disabled" type="submit" name="submit" id="submit">
+                            </div>
+                              
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
  
 </body>
+  
 </html>

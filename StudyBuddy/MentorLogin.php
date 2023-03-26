@@ -1,20 +1,14 @@
 <?php
      $conn=mysqli_connect('sql12.freesqldatabase.com','sql12608210','fBXhWL98H4','sql12608210') or die("Connection failed" .mysqli_connect_error());
 ?>
-
-
-
 <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
   </head>
 <body>
 <?php
@@ -34,7 +28,7 @@
         //print_r($row);
       
 
-        if($row[0]==1 && $row2["Type"]=='P')
+        if($row[0]==1 && $row2['Type']=='P')
         {
         // Register $username, $password and redirect to file "login_success.php"
             session_start();
@@ -42,7 +36,7 @@
             $_SESSION["uid"] = $karo;
             header("location:Prof.php");
         }
-        else if($row[0]==1 && $row2["Type"]=='A'){
+        else if($row[0]==1 && $row2['Type']=='A'){
             session_start();
             $karo=print_r($row2[0],true);
             $_SESSION["uid"] = $karo;
@@ -58,21 +52,38 @@
         }
     }
 ?>
-        <h1>Login</h1>    
-        <form action="" method="POST">
-            <label for="name">ID</label><br>
-            <input  type="text" name="ID" id="ID" required placeholder="ID"><br><br>
-            <label for="password">Password:</label><br>
-            <input type="text" name="password" id="password" required placeholder="Password"><br><br>
-    
-            <input type="submit" name="submit" id="submit">
-        </form>
+<section class="bg-light py-5">
+  <div class="container px-5 my-5 px-5">
+    <div class="text-center mb-5">
+      <h1>LOGIN</h1>    
     </div>
+    <div class="row gx-5 justify-content-center">
+      <div class="col-lg-4">
+        <form action="" method="POST">
+          <div class="form-floating mb-3">
+            <input class="form-control" type="text" name="ID" id="ID" required placeholder="ID"><br>
+            <label for="name">ID</label><br>
+          </div>
+          <div class="form-floating mb-3">
+            <input class="form-control" type="text" name="password" id="password" required placeholder="Password"><br>
+            <label for="password">Password:</label><br>
+          </div>
+          <div class="d-grid">
+             <input class="btn btn-primary btn-lg disabled" type="submit" name="submit" id="submit">
+            </div>
+                              
+        </form>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
 </body>
 </html>
