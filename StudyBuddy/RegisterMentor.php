@@ -40,6 +40,12 @@
             return false;
         }
 
+        var type = document.forms["myform"]["type"].value;
+        if(type=="C"){
+            alert("Choose a role first!");
+            return false;
+        }
+
         var password = document.forms["myform"]["password"].value;
         var reg=/[^a-zA-Z0-9\!\@\#\$]+/;
         if (reg.test(password)){
@@ -47,11 +53,12 @@
             return false;
         }
 
-        var type = document.forms["myform"]["type"].value;
-        if(type=="C"){
-            alert("Choose a role first!");
+        var password2 = document.forms["myform"]["password2"].value;
+        if(password!=password2){
+            alert("Passwords do not match!");
             return false;
         }
+
     }
     </script>
     <meta charset="UTF-8">
@@ -65,7 +72,7 @@
     <form name="myform" action="RegisterMentor.php" onsubmit="return validate()" method="POST">
     <label for="UserID">UserID:</label><br>
     <input  type="text" name="UserID" id="UserID" required placeholder="UserID"><br><br>
-    <label for="name">Name:</label><br>
+    <label for="name">Username:</label><br>
     <input  type="text" name="name" id="name" required placeholder="Username"><br><br>
     <label for="type">Role:</label><br>
     <select name="type" id="type">
@@ -76,8 +83,8 @@
     </select><br><br>
     <label for="password">Password:</label><br>
     <input type="password" name="password" id="password" required placeholder="Password"><br><br>
-    <label for="cpassword">Confirm Password:</label><br>
-    <input type="password" name="cpassword" id="cpassword" required placeholder="Password"><br><br>
+    <label for="password2">Confirm Password:</label><br>
+    <input type="password" name="password2" id="password2" required placeholder="Re-type Password"><br><br>
     <input type="submit" name="submit" id="submit">
     </form>
 </div>
