@@ -65,7 +65,7 @@
             <label for="name">ID</label><br>
           </div>
           <div class="form-floating mb-3">
-            <input class="form-control" type="text" name="password" id="password" required placeholder="Password"><br>
+            <input class="form-control" type="password" name="password" id="password" required placeholder="Password"><br>
             <label for="password">Password:</label><br>
           </div>
           <div class="d-grid">
