@@ -1,5 +1,32 @@
 <?php
-     $conn=mysqli_connect('sql12.freesqldatabase.com','sql12608210','fBXhWL98H4','sql12608210') or die("Connection failed" .mysqli_connect_error());
+    $conn=mysqli_connect('sql12.freesqldatabase.com','sql12608210','fBXhWL98H4','sql12608210') or die("Connection failed" .mysqli_connect_error());
+    if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
+        if(isset($_POST['name'])&& isset($_POST['type']) && isset($_POST['UserID']) && isset($_POST['password'])){
+            $UserID=$_POST['UserID'];
+            $name=$_POST['name'];
+            $type=$_POST['type'];
+            $password=$_POST['password'];
+
+            $sql2="SELECT count(*) FROM Mentor WHERE id='$UserID'";
+            $query2=mysqli_query($conn,$sql2);
+            $row2=mysqli_fetch_array($query2);
+            
+            if($row2[0]==1){
+                $failed=1;
+                header("Location: RegisterMentor.php?msg=failed");
+            }
+            else{
+                $sql="INSERT INTO Mentor VALUES ('$UserID','$name','$type','$password')";
+                $query =mysqli_query($conn,$sql);
+                if($query){
+                    header("Location: MentorLogin.php");
+                }
+                else{
+                    echo 'Value exists';
+                }
+            }
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,38 +46,20 @@
             alert("Password should not contain characters other than A-Z/a-z/0-9/!/@/#/$");
             return false;
         }
+
+        var type = document.forms["myform"]["type"].value;
+        if(type=="C"){
+            alert("Choose a role first!");
+            return false;
+        }
     }
-</script>
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-<?php
-    if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
-        if(isset($_POST['name'])&& isset($_POST['type']) && isset($_POST['UserID']) && isset($_POST['password'])){
-            $UserID=$_POST['UserID'];
-            $name=$_POST['name'];
-            $type=$_POST['type'];
-            $password=$_POST['password'];
-            
-            $sql="INSERT INTO Mentor VALUES ('$UserID','$name','$type','$password')";
-            $query =mysqli_query($conn,$sql);
-            if($query){
-                
-                header("Location: MentorLogin.php");
-            }
-            else{
-                echo 'Value exists';
-            }
-        }
-        // else{
-        //     echo 'Invalid input';
-        // }
-    }
-//}
-?>      
 <div>
     <h1>Register New User</h1>    
     <form name="myform" action="RegisterMentor.php" onsubmit="return validate()" method="POST">
@@ -60,14 +69,27 @@
     <input  type="text" name="name" id="name" required placeholder="Username"><br><br>
     <label for="type">Role:</label><br>
     <select name="type" id="type">
+        <option value="C">Choose:</option>
         <option value="A">Admin</option>
         <option value="P">Professor</option>
         <option value="T">Teaching Assistant</option>
     </select><br><br>
     <label for="password">Password:</label><br>
     <input type="password" name="password" id="password" required placeholder="Password"><br><br>
+    <label for="cpassword">Confirm Password:</label><br>
+    <input type="password" name="cpassword" id="cpassword" required placeholder="Password"><br><br>
     <input type="submit" name="submit" id="submit">
     </form>
 </div>
+<?php
+    if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') {
+        //echo 'UserID';
+        ?>
+        <script type="text/javascript">
+            alert("UserID already taken!");
+        </script>
+        <?php
+    }
+?>
 </body>
 </html>
