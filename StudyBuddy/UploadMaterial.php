@@ -48,43 +48,31 @@
     <title>Upload Material</title>
 </head>
 <body>
-<?php
-    if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
-        if(isset($_POST['name'])&& isset($_POST['type']) && isset($_POST['semester']) && isset($_POST['subject']) && isset($_POST['link'])){
-        $Semester=$_COOKIE['semname'];
-        $Subject=$_COOKIE['subname'];
-        $Type=$_POST['type'];
-        $name=$_POST['name'];
-        $link=$_POST['link'];
 
-        if(($Type=='B' || $Type=='A' || $Type=='Q' || $Type=='N' )){
-            $sql="INSERT INTO Links VALUES ('$Semester','$Subject','$Type','$name','$link')";
-            $query =mysqli_query($conn,$sql);
-            if($query){
-                if($Type == 'B'){
-                    header("Location: Books.php");
-                }
-                if($Type == 'A'){
-                    header("Location: Assignment.php");
-                }
-                if($Type == 'N'){
-                    header("Location: Notes.php");
-                }
-                if($Type == 'Q'){
-                    header("Location: pyq.php");
-                }
-            }
-            else{
-                echo 'Value exists';
-            }
-        }
-        else{
-            echo 'Invalid input';
-        }
+<?php
+    //echo 'ghuss';
+    if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
+       // echo 'aur thoda';
+        if(isset($_POST['name'])&& isset($_POST['type']) && isset($_POST['semester']) && isset($_POST['subject'])  ){
+           // echo 'pahhuch';
+        $semester='sem'.$_COOKIE['semname'];
+        $subject=$_COOKIE['subname'];
+        $type=$_POST['type'];
+        $name=$_POST['name'];
+        $files=$_FILES['uploadfile'];
+        $time=date("Y_m_d_h_i_sa");
+        $filename=$files['name'];
+        $filetmp=$files['tmp_name'];
+        $filtype=explode('/',$files['type'])[1];
+        $destinationfile='material/'.$semester.'/'.$subject.'/'.$type.'/'.$time.'.'.$name.'.'.$filtype;
+        //echo $destinationfile;
+        move_uploaded_file($filetmp,$destinationfile);
+        echo 'File uploaded Successfully';
     }
 }
 ?>      
-    <form name="myform" action="UploadMaterial.php" onsubmit="return validate()" method="post">
+
+    <form name="myform" action="UploadMaterial.php" onsubmit="return validate()" method="post" enctype="multipart/form-data">
     <h3>Enter Material Details</h3>
 
     Semester: <select name="semester" id="semester">
@@ -106,8 +94,8 @@
     </select><br><br>
     <label for="name">Title:</label><br>
     <input type="text" id="name" name="name" required placeholder="Title"><br><br>
-    <label for="link">Link:</label><br>
-    <input type="text" id="link" name="link" required placeholder="Link"><br><br>
+    <label for="uploadfile">Choose Material:</label><br>
+    <input type="file" name="uploadfile" id="uploadfile" class="form-control"><br><br><br>
     <input type="submit" name="submit" id="submit">
     </form>
 </body>

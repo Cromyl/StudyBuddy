@@ -48,7 +48,7 @@
             session_start();
             $karo=print_r($row2[0],true);
             $_SESSION["uid"] = $karo;
-            header("location:HomePage.php");
+            header("location:index.php");
         }
         else {
             echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
