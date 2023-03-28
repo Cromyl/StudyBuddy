@@ -14,6 +14,7 @@ $path='material/'.'sem'.$sem.'/'.$subject.'/'.$type;
 $scan = scandir($path);
 foreach($scan as $file) {
    if (!is_dir("myFolder/$file")) {
+      if($file=='ignore.txt') continue;
       $msg=explode('.',$file)[1];
       $fin=$path.'/'.$file;
       ?>
