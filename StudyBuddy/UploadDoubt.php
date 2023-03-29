@@ -7,12 +7,15 @@
     <title>Ask Question</title>
 </head>
 <body>
-    <form action="buildplan_entry.php" method="post">
+    <form action="AddToQue" method="post">
     <h3>Ask Doubt</h3>
-    <label for="">Enter your Question:</label><br><br>
-    <input type="text" id="planname" name="planname">
-    <br><br>
-    <input type="submit" name="submit1" id="submit1">
+    <label for="">Title:</label>
+    <input type="text" id="planname" name="planname"><br><br>
+    <label for="">Enter your Question:</label>
+    <input type="text" id="planname" name="planname"><br><br>
+    <label for="">Subject</label>
+    <input type="text" id="planname" name="planname"><br><br>
+    <input type="submit" name="submit" id="submit">
     </form>
 </body>
 </html>
