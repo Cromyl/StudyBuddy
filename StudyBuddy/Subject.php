@@ -61,27 +61,74 @@
             }
         }
     </script>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-<h1>Choose Material </h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <h3 class="navbar-brand">Study Buddy</h3>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php"></a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php"></a></li> -->
+                    </ul>
+                </div>
+            </div>
+           
+        </nav>
 
-<form name="myform" action="showMaterial.php" onsubmit="return validate()" method="post" enctype="multipart/form-data">
-Subject: <select name="subject" id="subject">
-        <option value="" selected="selected">Select Subject</option>
-    </select>
-    <br><br>
+<section class="bg-light py-5">
+        <div class="container px-5 my-5 px-5">
+            <div class="text-center mb-5">
+              <h2 class="fw-bolder">Choose Material</h2><br><br>
 
-    
-    <label for="type">Material Type:</label><br>
-    <select name="type" id="type">
-        <option value="C">Choose:</option>
-        <option value="B">Books</option>
-        <option value="A">Sample Assignment</option>
-        <option value="Q">Previous Year Papers</option>
-        <option value="N">Notes</option>
-    </select><br><br>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-4">
+                        <form name="myform" action="showMaterial.php" onsubmit="return validate()"  method="post" enctype="multipart/form-data">
+                            <div class="form-floating mb-3">
+                                <select   class="form-select form-control"  name="subject" id="subject">
+                                        <option value="" selected="selected">Choose Subject</option>
+                                    </select>
+                                    <label for="Subject">Subject:</label>
+                            </div>
+                            <div class="form-floating mb-3">
+        
+                            <select class="form-select" name="type" id="type">
+                                <option value="C">Choose Material Type:</option>
+                                <option value="B">Books</option>
+                                <option value="A">Sample Assignment</option>
+                                <option value="Q">Previous Year Papers</option>
+                                <option value="N">Notes</option>
+                                <label for="type">Material Type:</label>
+                            </select>
+                            <label for="type">Material Type:</label><br>
+                        </div>
+                            <div class="d-grid">
+                                <input class="btn btn-primary btn-lg" type="submit" name="submit" id="submit">
+                            </div>
+                              
+                        </form>
 
-    <input type="submit" name="submit" id="submit">
-    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
 </body>
 </html>
