@@ -1,0 +1,8 @@
+create table student(
+    Studname varchar2(10),
+    department varchar2(10),
+    marks int
+);
+insert all into student values ('shruti','IT',10) into student values ('Radhika','IT',10) into student values ('Pankti','IT',10) into student values ('Naysha','IT',20) into student values ('Karishma','ECE',20) into student values ('Pragati','ECE',20) into student values ('Bob','ECE',20) select * from dual;
+describe student;
+select count(studname) from student group by department;
