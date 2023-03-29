@@ -33,6 +33,7 @@
             <div class="container px-5 my-5 px-5">
                 <div class="text-center mb-5">
                     <h1>Discussion Page</h1>
+                    <a href="UploadDoubt.php">Upload Your Question</a>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-8">
