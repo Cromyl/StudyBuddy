@@ -1,6 +1,15 @@
 <?php
+    session_start();
      $conn=mysqli_connect('sql12.freesqldatabase.com','sql12608210','fBXhWL98H4','sql12608210') or die("Connection failed" .mysqli_connect_error());
-     $query="SELECT * FROM Doubt";
+     $id=$_SESSION['uid'];
+     //echo gettype($id);
+     $q="SELECT Semester FROM Student WHERE Rollno='$id'";
+     $r=mysqli_query($conn,$q);
+     $r=mysqli_fetch_assoc($r)['Semester'];
+     //echo $r;
+     $r=intval($r);
+     //echo gettype($r);
+     $query="SELECT * FROM Announcement where Semester='$r' order by PostDate DESC,PostTime DESC";
      $result=mysqli_query($conn,$query);
 ?>
 <!DOCTYPE html>
@@ -44,18 +53,14 @@
                     <div class="card-body p-4">
                         <div class="d-flex">
                             <div class="ms-4">
-                         <h5 class="mb-1"><?php echo $row['D_Id'];?> <?php echo ". "?><?php echo $row['D_Name'];?></h5>       
-                    <div class="small text-muted">
-                    <?php echo "Subject: "?>
-                    <?php echo $row['Subject'];?><br>
-                    <?php echo "Semester: "?>
-                    <?php echo $row['Semester'];?><br>          
-
-                </div>        
-               <?php
-               $id=$row['D_Id'];
-               echo "<a href=post.php?id=$id>Answer</a>";
-               ?>
+                            
+                                   
+                          
+                            <div class="d-flex flex-row">
+                            <div class="p-2"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                            <div class="p-2" style="margin-top: 0.7rem"><h5 class="mb-1"><?php echo $row['Post'];?> </h5></div>
+                            
+                            </div>
                                 
                             </div>
                         </div>
