@@ -24,6 +24,7 @@
         $query="INSERT INTO Doubt VALUES ('$newid','$subject','$sem','$desc','$title')";
         $result=mysqli_query($conn,$query);
         echo 'Question Uploded Successfully';
+        header("Location: DiscussionPage.php");
    }
 
 //    //echo $sem;
@@ -83,7 +84,7 @@
 <body>
 <h1>Write your Query..</h1>
 
-<form name="myform" action="DiscussionPage.php" onsubmit="return validate()" method="post" enctype="multipart/form-data">
+<form name="myform" action="UploadDoubt.php" onsubmit="return validate()" method="post" enctype="multipart/form-data">
 Subject: <select name="subject" id="subject">
         <option value="" selected="selected">Select Subject</option>
     </select>
