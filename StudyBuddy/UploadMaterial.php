@@ -77,6 +77,20 @@
     }
 }
 ?>      
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#!">StudyBuddy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Services</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
 <section class="bg-light py-5">
     <div class="container px-5 my-3 px-5">
@@ -87,10 +101,10 @@
             <div class="col-lg-4">
                 <form name="myform" action="UploadMaterial.php" onsubmit="return validate()" method="post" enctype="multipart/form-data">
                 <div class="form-floating mb-3">
-                         <select class="form-select" name="semester" id="semester"><option  value="" selected="selected">Select semester</option></select>
+                         <select  class="form-select" name="semester" id="semester"><option  value="" selected="selected">Select semester</option></select>
                 </div>
                 <div class="form-floating mb-3">
-                    <select class="form-select" name="subject" id="subject">
+                    <select   class="form-select" name="subject" id="subject">
                         <option value="" selected="selected">Please select semester first</option>
                     </select>
                 </div>

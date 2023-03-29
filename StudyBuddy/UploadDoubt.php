@@ -38,7 +38,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Doubt</title>
-
+    
     <script type="text/javascript">
         var semesterObject = {
             "1": { "PHY": [""], "LAL": [""], "ITP": [""], "FEE": [""], "PFC": [""], "POM": [""] },
@@ -80,26 +80,58 @@
             }
         }
     </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+
 </head>
 <body>
-<h1>Write your Query..</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#!">StudyBuddy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Services</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="bg-light py-5">
+            <div class="container px-5 my-5 px-5">
+                <div class="text-center mb-5">
+                    <form name="myform" action="UploadDoubt.php" onsubmit="return validate()" method="post" enctype="multipart/form-data">
+                    <h2 class="fw-bolder">Post Your Doubt</h2>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                            <div class="form-floating mb-3">
+                                <select   class="form-select form-control"  name="subject" id="subject">
+                                        <option value="" selected="selected"></option>
+                                    </select>
+                                    <label for="Subject">Subject</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input  class="form-control" type="text" name="title" id="title">
+                                <label for="QuestionTitle">Type your Question Title:</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input  class="form-control" type="text" name="desc" id="desc">
+                                <label for="Question">Type your Question Description</label>
 
-<form name="myform" action="UploadDoubt.php" onsubmit="return validate()" method="post" enctype="multipart/form-data">
-Subject: <select name="subject" id="subject">
-        <option value="" selected="selected">Select Subject</option>
-    </select>
-    <br><br>
-    Type your Question Title:
-<input type="text" name="title" id="title">
-<br><br>
-        Type your Question Description: <br>
-        <input type="text" name="desc" id="desc">
-    
-   <br><br>
+                            </div>                            
+                            <div class="d-grid"><button class="btn btn-primary btn-lg disabled" name="submit" id="submit" type="submit">Submit</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <input type="submit" name="submit" id="submit">
-    </form>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
  
 </body>
