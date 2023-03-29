@@ -21,7 +21,7 @@
         $row2=mysqli_fetch_array($r);
        // $newid=print_r($row2[0]+1);
         $newid=$row2[0]+1;
-        $query="INSERT INTO Doubt VALUES ('$newid','$subject','$sem','$title','$desc')";
+        $query="INSERT INTO Doubt VALUES ('$newid','$subject','$sem','$desc','$title')";
         $result=mysqli_query($conn,$query);
         echo 'Question Uploded Successfully';
    }
@@ -83,7 +83,7 @@
 <body>
 <h1>Write your Query..</h1>
 
-<form name="myform" action="UploadDoubt.php" onsubmit="return validate()" method="post" enctype="multipart/form-data">
+<form name="myform" action="DiscussionPage.php" onsubmit="return validate()" method="post" enctype="multipart/form-data">
 Subject: <select name="subject" id="subject">
         <option value="" selected="selected">Select Subject</option>
     </select>
