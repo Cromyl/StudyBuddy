@@ -46,6 +46,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Material</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+<link href="styles.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -67,36 +69,68 @@
         $destinationfile='material/'.$semester.'/'.$subject.'/'.$type.'/'.$time.'.'.$name.'.'.$filtype;
         //echo $destinationfile;
         move_uploaded_file($filetmp,$destinationfile);
-        echo 'File uploaded Successfully';
+        
+        echo '<div style="margin-bottom: 0px" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong> File Uploaded Successfully.</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>';
     }
 }
 ?>      
 
-    <form name="myform" action="UploadMaterial.php" onsubmit="return validate()" method="post" enctype="multipart/form-data">
-    <h3>Enter Material Details</h3>
+<section class="bg-light py-5">
+    <div class="container px-5 my-3 px-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder">Upload Material</h2>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-4">
+                <form name="myform" action="UploadMaterial.php" onsubmit="return validate()" method="post" enctype="multipart/form-data">
+                <div class="form-floating mb-3">
+                         <select class="form-select" name="semester" id="semester"><option  value="" selected="selected">Select semester</option></select>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" name="subject" id="subject">
+                        <option value="" selected="selected">Please select semester first</option>
+                    </select>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" name="type" id="type">
+                        <option value="C">Choose:</option>
+                        <option value="B">Books</option>
+                        <option value="A">Sample Assignment</option>
+                        <option value="Q">Previous Year Papers</option>
+                        <option value="N">Notes</option>
+                        <label for="type">Material Type:</label>
+                    </select>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" type="text" id="name" name="name" required placeholder="Title">
+                    <label for="name">Title:</label>
+                </div>
+                <div class="mb-3">
+                    <input type="file" name="uploadfile" id="uploadfile" class="form-control">
+                </div>
+                <div class="d-grid"><button class="btn btn-primary btn-lg"type="submit" name="submit" id="submit" >Submit</button></div>
+                            
 
-    Semester: <select name="semester" id="semester">
-        <option value="" selected="selected">Select semester</option>
-    </select>
-    <br><br>
-    Subject: <select name="subject" id="subject">
-        <option value="" selected="selected">Please select semester first</option>
-    </select>
-    <br><br>
+            </form>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+
+
+
+
+
     
-    <label for="type">Material Type:</label><br>
-    <select name="type" id="type">
-        <option value="C">Choose:</option>
-        <option value="B">Books</option>
-        <option value="A">Sample Assignment</option>
-        <option value="Q">Previous Year Papers</option>
-        <option value="N">Notes</option>
-    </select><br><br>
-    <label for="name">Title:</label><br>
-    <input type="text" id="name" name="name" required placeholder="Title"><br><br>
-    <label for="uploadfile">Choose Material:</label><br>
-    <input type="file" name="uploadfile" id="uploadfile" class="form-control"><br><br><br>
-    <input type="submit" name="submit" id="submit">
-    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+                <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
 </body>
 </html>
