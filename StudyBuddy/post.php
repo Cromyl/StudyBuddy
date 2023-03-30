@@ -4,8 +4,12 @@
     $query="SELECT * FROM Doubt WHERE D_Id=$id";
     $result=mysqli_query($conn,$query);
     $row=mysqli_fetch_array($result);
-    $query2="SELECT * FROM Solution WHERE Q_Id=$id";
+    $query2="SELECT * FROM Solution WHERE Q_Id=$id ORDER BY Ans_no";
     $result2=mysqli_query($conn,$query2);
+    $query5="SELECT * FROM Solution WHERE Q_Id=$id ORDER BY Ans_no DESC";
+    $result5=mysqli_query($conn,$query5);
+    $row5=mysqli_fetch_array($result5);
+    $max=$row5[1]; $max++;
 
     session_start();
     $temp=$_SESSION['uid'];
@@ -14,14 +18,16 @@
     $row3=mysqli_fetch_array($query3);
     $sem=$row3[0];
 
-    if((isset($_POST['Answer'])&&isset($_POST['Answer_id']))){
+    if((isset($_POST['Answer']))){
         $Answer=$_POST['Answer'];
-        $Answer_id=$_POST['Answer_id'];
+        $Ans_no=$max;
+        // $Answer_id=$_POST['Answer_id'];
         $Answerer_id=$row3[0];
         $Name=$row3[1];
         $Question_id=$id;
+        $Answer_id=$Question_id.'_'.$Ans_no;
 
-        $sql="INSERT INTO Solution VALUES ('$Answer_id','$Question_id','$Answerer_id','$Name','$Answer')";
+        $sql="INSERT INTO Solution VALUES ('$Answer_id','$Ans_no','$Question_id','$Answerer_id','$Name','$Answer')";
 
         $query4 =mysqli_query($conn,$sql);
         if($query4){
@@ -111,25 +117,9 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-4">
                         <form action="post.php?id=<?php echo "$id" ?>" method="post">
-                            <!-- <div class="form-floating mb-3">
-                                <input class="form-control" type="text" id="Question_id" name="Question_id">
-                                <label for="Question_id">Question_id</label>
-                            </div> -->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" type="text" id="Answer_id" name="Answer_id">
-                                <label for="Answer_id">Answer_id</label>
-                            </div>
-                            <!-- <div class="form-floating mb-3">
-                                <input class="form-control" type="text" id="Answerer_id" name="Answerer_id">
-                                <label for="Answerer_id">Answerer_id</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input class="form-control" type="text" id="Name" name="Name">
-                                <label for="Name">Name</label>
-                            </div> -->
                             <div class="form-floating mb-3">
                                 <input class="form-control" type="text" id="Answer" name="Answer">
-                                <label for="Answer">Answer</label>
+                                <label for="Answer">Add an Answer</label>
                             </div>
                             <div class="d-grid"><button class="btn btn-primary btn-lg"type="submit" name="submit" id="submit" >Submit</button></div>
                             
