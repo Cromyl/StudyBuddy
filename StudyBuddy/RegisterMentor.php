@@ -33,6 +33,26 @@
 <head>
     <script type="text/javascript">
     function validate() {
+        var userid= document.forms["myform"]["UserID"].value;
+        if(userid.length!=8){
+            alert("Recheck your id format!");
+            return false;
+        }
+        else{
+            var userid1=userid.substr(0,4);
+            var reg=/[^A-Z]+/;
+            if(reg.test(userid1)){
+                alert("Incorrect id format!");
+                return false;
+            }
+            var userid2=userid.substr(5);
+            var reg=/[^0-9]+/;
+            if(reg.test(userid2)){
+                alert("Incorrect id format!");
+                return false;
+            }
+        }
+
         var name = document.forms["myform"]["name"].value;
         var reg=/[^a-zA-Z\ ]+/;
         if (reg.test(name)){

@@ -20,7 +20,6 @@
         }
         else{
             var rollno1=rollno.substr(0,2);
-            console.log(rollno1);
             var reg=/[^A-Z]+/;
             if(reg.test(rollno1)){
                 alert("Incorrect roll format!");
@@ -64,23 +63,34 @@
 <?php
     if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
         if(isset($_POST['name'])&& isset($_POST['Roll_Number']) && isset($_POST['Semester']) && isset($_POST['password'])){
-        $name=$_POST['name'];
-        $rollnumber=$_POST['Roll_Number'];
-        $semester=$_POST['Semester'];
-        $password=$_POST['password'];
-            $sql="INSERT INTO  Student VALUES ('$rollnumber','$name','$semester','$password')";
-            $query =mysqli_query($conn,$sql);
-            if($query){
-                
-                header("Location: UserLogin.php");
+            $name=$_POST['name'];
+            $rollnumber=$_POST['Roll_Number'];
+            $semester=$_POST['Semester'];
+            $password=$_POST['password'];
+
+            $sql2="SELECT count(*) FROM Student WHERE Rollno='$rollnumber'";
+            $query2=mysqli_query($conn,$sql2);
+            $row2=mysqli_fetch_array($query2);
+
+            if($row2[0]==1){
+                $failed=1;
+                header("Location: RegisterUser.php?msg=failed");
             }
             else{
-                echo 'Value exists';
+                $sql="INSERT INTO  Student VALUES ('$rollnumber','$name','$semester','$password')";
+                $query =mysqli_query($conn,$sql);
+                if($query){
+                    
+                    header("Location: UserLogin.php");
+                }
+                else{
+                    echo 'Value exists';
+                }
             }
-        }
         // else{
         //     echo 'Invalid input';
         // }
+        }
     }
 ?>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -133,7 +143,16 @@
             </div>
         </div>
     </section>
-        
+<?php
+    if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') {
+        //echo 'UserID';
+        ?>
+        <script type="text/javascript">
+            alert("Roll Number already exists!");
+        </script>
+        <?php
+    }
+?>  
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
