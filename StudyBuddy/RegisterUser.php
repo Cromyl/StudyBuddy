@@ -7,48 +7,45 @@
 <script type="text/javascript">
     function validate() {
         var name = document.forms["myform"]["name"].value;
-        if(name==""){
-            alert("Please enter your name!");
+        var reg=/[^a-zA-Z\ ]+/;
+        if (reg.test(name)){
+            alert("Name should only contain alphabets and spaces!");
             return false;
         }
-        else{
-            var reg=/[^a-zA-Z\ ]+/;
-            if (reg.test(name)){
-                alert("Name should only contain alphabets and spaces!");
-                return false;
-            }
-        }
+
         var rollno= document.forms["myform"]["Roll_Number"].value;
-        if(rollno==""){
-            alert("Please enter your Roll Number!");
-            return false;
-        }
-        var semester = document.forms["myform"]["Semester"].value;
-        if(semester==""){
-            alert("Please Enter Semester!");
-            return false;
-        }
-        else if(semester > 8){
-            alert("Enter Correct Semester(less than 9)!");
-            return false;
-        }
-        var password = document.forms["myform"]["password"].value;
-        if(password==""){
-            alert("Please enter the password");
+        if(rollno.length!=10){
+            alert("Recheck your roll number!");
             return false;
         }
         else{
-            var reg=/[^a-zA-Z0-9\!\@\#\$]+/;
-            if (reg.test(password)){
-                alert("Password should not contain characters other than A-Z/a-z/0-9/!/@/#/$");
+            var rollno1=rollno.substr(0,2);
+            console.log(rollno1);
+            var reg=/[^A-Z]+/;
+            if(reg.test(rollno1)){
+                alert("Incorrect roll format!");
                 return false;
             }
+            var rollno2=rollno.substr(3);
+            var reg=/[^0-9]+/;
+            if(reg.test(rollno2)){
+                alert("Incorrect roll format!");
+                return false;
+            }
+        }
+        
+        var password = document.forms["myform"]["password"].value;
+        var reg=/[^a-zA-Z0-9\!\@\#\$]+/;
+        if (reg.test(password)){
+            alert("Password should not contain characters other than A-Z/a-z/0-9/!/@/#/$");
+            return false;
         }
         var password2 = document.forms["myform"]["password2"].value;
         if(password!=password2){
             alert("Passwords do not match!");
             return false;
         }
+
     }
 </script>
 
@@ -114,7 +111,7 @@
                                 <label for="Roll_Number">Roll_Number:</label>
                             </div>
                             <div class="mb-3 form-floating">                        
-                                <input  class="form-control" type="text" name="Semester" id="Semester" required placeholder="Semester"> 
+                                <input  class="form-control" type="number" name="Semester" id="Semester" required placeholder="Semester" min="1" max="8"> 
                                 <label for="Semester">Semester:</label>
                             </div>
                             <div class="mb-3 form-floating">                        
