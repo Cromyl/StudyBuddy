@@ -1,11 +1,36 @@
 <?php
- $conn=mysqli_connect('sql12.freesqldatabase.com','sql12608210','fBXhWL98H4','sql12608210') or die("Connection failed" .mysqli_connect_error());
- $id = $_GET['id'];
- $query="SELECT * FROM Doubt WHERE D_Id=$id";
- $result=mysqli_query($conn,$query);
- $row=mysqli_fetch_array($result);
- $query2="SELECT * FROM Solution WHERE Q_Id=$id";
- $result2=mysqli_query($conn,$query2);
+    $conn=mysqli_connect('sql12.freesqldatabase.com','sql12608210','fBXhWL98H4','sql12608210') or die("Connection failed" .mysqli_connect_error());
+    $id = $_GET['id'];
+    $query="SELECT * FROM Doubt WHERE D_Id=$id";
+    $result=mysqli_query($conn,$query);
+    $row=mysqli_fetch_array($result);
+    $query2="SELECT * FROM Solution WHERE Q_Id=$id";
+    $result2=mysqli_query($conn,$query2);
+
+    session_start();
+    $temp=$_SESSION['uid'];
+    $sql3="SELECT * FROM Student WHERE Rollno='$temp'";
+    $query3=mysqli_query($conn,$sql3);
+    $row3=mysqli_fetch_array($query3);
+    $sem=$row3[0];
+
+    if((isset($_POST['Answer'])&&isset($_POST['Answer_id']))){
+        $Answer=$_POST['Answer'];
+        $Answer_id=$_POST['Answer_id'];
+        $Answerer_id=$row3[0];
+        $Name=$row3[1];
+        $Question_id=$id;
+
+        $sql="INSERT INTO Solution VALUES ('$Answer_id','$Question_id','$Answerer_id','$Name','$Answer')";
+
+        $query4 =mysqli_query($conn,$sql);
+        if($query4){
+            header("Location: post.php?id=$id");
+        }
+        else{
+            echo 'Value exists';
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,23 +110,23 @@
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-4">
-                        <form action="AddToAnswer.php" method="post">
-                            <div class="form-floating mb-3">
+                        <form action="post.php?id=<?php echo "$id" ?>" method="post">
+                            <!-- <div class="form-floating mb-3">
                                 <input class="form-control" type="text" id="Question_id" name="Question_id">
                                 <label for="Question_id">Question_id</label>
-                            </div>
+                            </div> -->
                             <div class="form-floating mb-3">
                                 <input class="form-control" type="text" id="Answer_id" name="Answer_id">
                                 <label for="Answer_id">Answer_id</label>
                             </div>
-                            <div class="form-floating mb-3">
+                            <!-- <div class="form-floating mb-3">
                                 <input class="form-control" type="text" id="Answerer_id" name="Answerer_id">
                                 <label for="Answerer_id">Answerer_id</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input class="form-control" type="text" id="Name" name="Name">
                                 <label for="Name">Name</label>
-                            </div>
+                            </div> -->
                             <div class="form-floating mb-3">
                                 <input class="form-control" type="text" id="Answer" name="Answer">
                                 <label for="Answer">Answer</label>
