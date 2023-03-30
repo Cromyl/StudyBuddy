@@ -70,18 +70,19 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container px-5">
-                <h3 class="navbar-brand">Study Buddy</h3>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php"></a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php"></a></li> -->
-                    </ul>
-                </div>
-            </div>
-           
-        </nav>
+<a class="btn btn-primary btn-lg px-3 me-sm-3" href="index.php">Back</a>
+    <div class="container px-5">
+        <h3 class="navbar-brand">Study Buddy</h3>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php"></a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php"></a></li> -->
+            </ul>
+        </div>
+    </div>
+    
+</nav>
 
 <section class="bg-light py-5">
         <div class="container px-5 my-5 px-5">
