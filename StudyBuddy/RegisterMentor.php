@@ -1,5 +1,5 @@
 <?php
-    $conn=mysqli_connect('sql12.freesqldatabase.com','sql12608210','fBXhWL98H4','sql12608210') or die("Connection failed" .mysqli_connect_error());
+  $conn=mysqli_connect('sql12.freesqldatabase.com','sql12610063','nDGjwWyFIG','sql12610063') or die("Connection failed" .mysqli_connect_error());
     if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
         if(isset($_POST['name'])&& isset($_POST['type']) && isset($_POST['UserID']) && isset($_POST['password'])){
             $UserID=$_POST['UserID'];
