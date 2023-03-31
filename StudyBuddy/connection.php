@@ -3,7 +3,7 @@
    $username = "sql12608210";
    $password = "fBXhWL98H4";
    $myDB= "sql12608210";
-    $conn=mysqli_connect('sql12.freesqldatabase.com','sql12608210','fBXhWL98H4','sql12608210') or die("Connection failed" .mysqli_connect_error());
+   $conn=mysqli_connect('sql12.freesqldatabase.com','sql12610063','nDGjwWyFIG','sql12610063') or die("Connection failed" .mysqli_connect_error());
    // $conn=new PDO("mysql:host=$servername;dbname=$myDB", $username, $password);
     $query="SELECT * FROM student";
     $result=mysqli_query($conn,$query);
