@@ -6,10 +6,20 @@ $conn=mysqli_connect('sql12.freesqldatabase.com','sql12610063','nDGjwWyFIG','sql
     $row=mysqli_fetch_array($result);
     $query2="SELECT * FROM Solution WHERE Q_Id=$id ORDER BY Ans_no";
     $result2=mysqli_query($conn,$query2);
+    $query6="SELECT count(*) FROM Solution WHERE Q_Id=$id";
+    $result6=mysqli_query($conn,$query6);
+    $row6=mysqli_fetch_array($result6);
+
     $query5="SELECT * FROM Solution WHERE Q_Id=$id ORDER BY Ans_no DESC";
     $result5=mysqli_query($conn,$query5);
     $row5=mysqli_fetch_array($result5);
-    $max=$row5[1]; $max++;
+
+    if($row6[0]>0){
+        $max=$row5[1]; $max++;
+    }
+    else{
+        $max=1;
+    }
 
     session_start();
     $temp=$_SESSION['uid'];
