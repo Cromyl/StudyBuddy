@@ -1,5 +1,5 @@
 <?php
-    $conn=mysqli_connect('sql12.freesqldatabase.com','sql12610063','nDGjwWyFIG','sql12610063') or die("Connection failed" .mysqli_connect_error());
+    $conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
      session_start();
      $temp=$_SESSION["uid"];
      $sql="SELECT * FROM Mentor WHERE Id='$temp'";

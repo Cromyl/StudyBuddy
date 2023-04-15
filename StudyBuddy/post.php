@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect('sql12.freesqldatabase.com','sql12610063','nDGjwWyFIG','sql12610063') or die("Connection failed" .mysqli_connect_error());
+    $conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
     $id = $_GET['id'];
     $query="SELECT * FROM Doubt WHERE D_Id=$id";
     $result=mysqli_query($conn,$query);
