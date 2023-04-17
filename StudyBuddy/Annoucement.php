@@ -1,16 +1,16 @@
 <?php
     session_start();
     $conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
-     $id=$_SESSION['uid'];
-     //echo gettype($id);
-     $q="SELECT Semester FROM Student WHERE Rollno='$id'";
-     $r=mysqli_query($conn,$q);
-     $r=mysqli_fetch_assoc($r)['Semester'];
-     //echo $r;
-     $r=intval($r);
-     //echo gettype($r);
-     $query="SELECT * FROM Announcement where Semester='$r' order by PostDate DESC,PostTime DESC";
-     $result=mysqli_query($conn,$query);
+    $id=$_SESSION['uid'];
+    //echo gettype($id);
+    $q="SELECT Semester FROM Student WHERE Rollno='$id'";
+    $r=mysqli_query($conn,$q);
+    $r=mysqli_fetch_assoc($r)['Semester'];
+    //echo $r;
+    $r=intval($r);
+    //echo gettype($r);
+    $query="SELECT * FROM Announcement where Semester='$r' OR Semester='9' order by Ann_no DESC";
+    $result=mysqli_query($conn,$query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="#!">Welcome!!</a>
+                <a class="navbar-brand" href="#!">Announcements!!</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">

@@ -53,13 +53,6 @@
                 document.cookie="subname="+Sub;
             }
         }
-        function validate() {
-            var type = document.forms["myform"]["type"].value;
-            if(type=="C"){
-                alert("Choose a role first!");
-                return false;
-            }
-        }
     </script>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -92,23 +85,23 @@
                     <div class="col-lg-4">
                         <form name="myform" action="showMaterial.php" onsubmit="return validate()"  method="post" enctype="multipart/form-data">
                             <div class="form-floating mb-3">
-                                <select   class="form-select form-control"  name="subject" id="subject">
+                                <select   class="form-control"  name="subject" id="subject" required>
                                         <option value="" selected="selected">Choose Subject</option>
                                     </select>
                                     <label for="Subject">Subject:</label>
                             </div>
+                            
                             <div class="form-floating mb-3">
         
-                            <select class="form-select" name="type" id="type">
-                                <option value="C">Choose Material Type:</option>
-                                <option value="B">Books</option>
-                                <option value="A">Sample Assignment</option>
-                                <option value="Q">Previous Year Papers</option>
-                                <option value="N">Notes</option>
-                                <label for="type">Material Type:</label>
-                            </select>
-                            <label for="type">Material Type:</label><br>
-                        </div>
+                                <select class="form-control" name="type" id="type" required>
+                                    <option value="" disabled selected>Choose Material Type:</option>
+                                    <option value="B">Books</option>
+                                    <option value="A">Sample Assignment</option>
+                                    <option value="Q">Previous Year Papers</option>
+                                    <option value="N">Notes</option>
+                                </select>
+                                <label for="type">Material Type:</label><br>
+                            </div>
                             <div class="d-grid">
                                 <input class="btn btn-primary btn-lg" type="submit" name="submit" id="submit">
                             </div>
