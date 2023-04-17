@@ -48,12 +48,12 @@
                             <div class="ms-4">
                             <p class="mb-1">  
                     <h4><?php echo $row['D_Id'];?><?php echo ". "?><?php echo $row['Doubt'];?></h4>                                  
-                    <?php echo "Subject: "?>
-                    <?php echo $row['Subject'];?><br>
-                    <?php echo "Semester: "?>
-                    <?php echo $row['Semester'];?><br>
-                    <?php echo "Doubt Name: "?>
-                    <?php echo $row['D_Name'];?><br>
+                    <?php echo "Subject: ";
+                        echo $row['Subject'];?><br>
+                    <?php echo "Semester: ";
+                        echo $row['Semester'];?><br>
+                    <?php echo "Doubt Name: ";
+                        echo $row['D_Name'];?><br>
                     <p>
                     
                     </p>

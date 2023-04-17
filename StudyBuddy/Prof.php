@@ -1,11 +1,11 @@
 <?php
     $conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
-     session_start();
-     $temp=$_SESSION["uid"];
-     $sql="SELECT * FROM Mentor WHERE Id='$temp'";
-     $query=mysqli_query($conn,$sql);
-     $row=mysqli_fetch_array($query);
-     $name=$row['Name'];
+    session_start();
+    $temp=$_SESSION["uid"];
+    $sql="SELECT * FROM Mentor WHERE Id='$temp'";
+    $query=mysqli_query($conn,$sql);
+    $row=mysqli_fetch_array($query);
+    $name=$row['Name'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +54,7 @@
                                 <div class="d-flex">
                                     <div class="flex-shrink-0"><i class="bi bi-bell-fill" style="font-size:30px; height:3rem; color:#0d6efd;"></i></div>
                                     <div class="ms-4">
-                                        <p class="mb-1"><a style="color:#1c5cb9; font-size:30px; font-weight:bold; text-decoration:none;"  href="Annoucement.php">Announcement</a></p>
+                                        <p class="mb-1"><a style="color:#1c5cb9; font-size:30px; font-weight:bold; text-decoration:none;"  href="MentorAnnounce.php">Announcement</a></p>
                                     </div>
                                 </div>
                             </div>
