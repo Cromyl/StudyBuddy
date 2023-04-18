@@ -58,7 +58,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 <link href="styles.css" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-img" style="height: max-height;
+  background-image: url(img3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <a class="navbar-brand" href="#!">StudyBuddy</a>
@@ -119,7 +123,7 @@
         <?php
         }?>
     </div>
-    <section class="bg-light py-5">
+    <section class="py-5">
             <div class="container px-5 my-3 px-5">
                 <div class="text-center mb-5">
                     <h2 class="fw-bolder">Upload Your Answer</h2>

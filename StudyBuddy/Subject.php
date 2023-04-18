@@ -61,7 +61,11 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="styles.css" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-img" style="height: max-height;
+  background-image: url(img3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container px-5">
         <h3 class="navbar-brand" style="font-size:40px; font-weight:bold;">StudyBuddy</h3>
@@ -76,7 +80,7 @@
     
 </nav>
 
-<section class="bg-light py-5">
+<section class="py-5">
         <div class="container px-5 my-5 px-5">
             <div class="text-center mb-5">
               <h2 class="fw-bolder">Choose Material</h2><br><br>
