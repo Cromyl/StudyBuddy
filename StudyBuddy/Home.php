@@ -15,7 +15,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-            <h1 class="navbar-brand">Study Buddy</h1>
+            <h1 class="navbar-brand" style="font-size:40px; font-weight:bold;">StudyBuddy</h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 </div>
