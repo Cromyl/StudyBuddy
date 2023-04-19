@@ -38,7 +38,8 @@
                     </ul>
                 </div>
             </div>
-            <a class="btn btn-primary btn-lg px-3 me-sm-3" href="UserLogin.php">Log Out</a>
+            <a class="btn btn-primary btn-lg px-3 me-sm-3" href="UserProfile.php">Profile Page</a>
+            <!-- <a class="btn btn-primary btn-lg px-3 me-sm-3" href="UserLogin.php">Log Out</a> -->
         </nav>
         <!-- Header-->
         <header class="bg-dark py-5">

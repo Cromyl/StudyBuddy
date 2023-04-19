@@ -100,7 +100,7 @@
                                     else echo $id.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
                                     echo 'Announcer: '.$name;
                                 ?><br>
-                                <div class="card-footer">
+                                <div class="card-footer" >
                                     <form method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this announcement?');">
                                         <input type="hidden" name="delete" value="<?php echo $row['Ann_no']; ?>">
                                         <button type="submit" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i> Delete</button>

@@ -12,7 +12,25 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
         <link href="styles.css" rel="stylesheet" />
-
+        <style>
+        body {
+        background-image: url('homebg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    body::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.7;
+        z-index: -1;
+    }
+</style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
