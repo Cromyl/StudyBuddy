@@ -58,7 +58,7 @@
                 </div>
             </div>
         </nav>
-        <section class="bg-light py-5">
+        <section class="py-5">
         <div class="container px-5 my-5 px-5">
             <div class="text-center mb-5">
               <h2 class="fw-bolder">ANNOUNCE!!</h2><br><br>
