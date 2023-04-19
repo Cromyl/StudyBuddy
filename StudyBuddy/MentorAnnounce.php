@@ -38,7 +38,11 @@
         <link href="styles.css" rel="stylesheet" />
     <title>Admin Announcement</title>
 </head>
-<body>
+<body class="bg-img" style="height: max-height;
+  background-image: url(img3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <a class="navbar-brand" href="#!">Admin Announcement!!</a>

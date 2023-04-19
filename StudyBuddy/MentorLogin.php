@@ -10,7 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
         <link href="styles.css" rel="stylesheet" />
   </head>
-<body>
+<body class="bg-img" style="height: max-height;
+  background-image: url(img3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;">
 <?php
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $id=$_POST['ID'];
@@ -52,7 +56,7 @@
         }
     }
 ?>
-<section class="bg-light py-5">
+<section class=" py-5">
   <div class="container px-5 my-5 px-5">
     <div class="text-center mb-5">
       <h1>LOGIN</h1>    

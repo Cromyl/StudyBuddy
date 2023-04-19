@@ -21,7 +21,11 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="styles.css" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-img" style="height: max-height;
+  background-image: url(img3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;">
 <?php
     if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
         if(isset($_POST['Semester'])&& isset($_POST['Post'])){
