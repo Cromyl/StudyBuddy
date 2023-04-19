@@ -61,24 +61,28 @@
 <section class="py-5 border-bottom">
     <div class="container px-5 my-5 px-5">
         <div class="text-center mb-5">
-            <h1>Announcements</h1><br>
-            <div class="d-flex justify-content-end">
-                <form method="post">
-                    <label for="semester">Filter by Semester:</label>
-                    <select name="semester" id="semester">
-                        <option value="">All Semesters</option>
-                        <option value="1" <?php if ($semesterFilter == '1') echo 'selected'; ?>>Semester 1</option>
-                        <option value="2" <?php if ($semesterFilter == '2') echo 'selected'; ?>>Semester 2</option>
-                        <option value="3" <?php if ($semesterFilter == '3') echo 'selected'; ?>>Semester 3</option>
-                        <option value="4" <?php if ($semesterFilter == '4') echo 'selected'; ?>>Semester 4</option>
-                        <option value="5" <?php if ($semesterFilter == '5') echo 'selected'; ?>>Semester 5</option>
-                        <option value="6" <?php if ($semesterFilter == '6') echo 'selected'; ?>>Semester 6</option>
-                        <option value="7" <?php if ($semesterFilter == '7') echo 'selected'; ?>>Semester 7</option>
-                        <option value="8" <?php if ($semesterFilter == '8') echo 'selected'; ?>>Semester 8</option>
-                        <!-- Add more semester options as needed -->
-                    </select>
-                    <button type="submit">Filter</button>
-                </form>
+            <h1 style="font: size 500px;">Announcements</h1>
+            <div>
+                <div   class="d-flex flex-row justify-content-end"class="form-floating mb-3">
+                    <form class="d-flex flex-row justify-content-end" method="post">
+                       
+                            <select class="form-select" name="semester" id="semester">
+                                <option value="">All Semesters</option>
+                                <option value="1" <?php if ($semesterFilter == '1') echo 'selected'; ?>>Semester 1</option>
+                                <option value="2" <?php if ($semesterFilter == '2') echo 'selected'; ?>>Semester 2</option>
+                                <option value="3" <?php if ($semesterFilter == '3') echo 'selected'; ?>>Semester 3</option>
+                                <option value="4" <?php if ($semesterFilter == '4') echo 'selected'; ?>>Semester 4</option>
+                                <option value="5" <?php if ($semesterFilter == '5') echo 'selected'; ?>>Semester 5</option>
+                                <option value="6" <?php if ($semesterFilter == '6') echo 'selected'; ?>>Semester 6</option>
+                                <option value="7" <?php if ($semesterFilter == '7') echo 'selected'; ?>>Semester 7</option>
+                                <option value="8" <?php if ($semesterFilter == '8') echo 'selected'; ?>>Semester 8</option>
+                                <!-- Add more semester options as needed -->
+                            </select>
+                            <button class="btn btn-primary btn-lg px-3 me-sm-2" type="submit">Filter</button>
+                       
+                    </form>
+
+                </div>
             </div>
         </div>
         <div class="row gx-5 justify-content-center">
