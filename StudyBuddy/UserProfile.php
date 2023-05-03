@@ -38,6 +38,14 @@ for (var i = 0; i < semesterDropdown.options.length; i++) {
   }
 }
     </script> -->
+    <style>
+    .card2 {
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 40px;
+    }
+</style>
+    
+
 </head>
 <body>
 
@@ -54,7 +62,7 @@ for (var i = 0; i < semesterDropdown.options.length; i++) {
 <?php
     if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit2'])){
         session_destroy();
-        header('Location: UserLogin.php');
+        header('Location: Home.php');
     }
  ?>
 <?php
@@ -78,15 +86,25 @@ for (var i = 0; i < semesterDropdown.options.length; i++) {
 ?>
 
 
-    <h1>Student Profile</h1><br><br>
-    <p>Name : <?php echo $name?></p>
-    <p>Roll Number : <?php echo $rollno?></p>
-    <p>Semester : <?php echo $sem?></p>
+<div>
+        
+        <br>
+        <div class="card2 text-center mx-auto" style="width: 28rem;">
+            <div class="card-body">
+                <h1>Student Profile</h1>
+                <p>Name: <?php echo $name?></p>
+                <p>Roll Number: <?php echo $rollno?></p>
+                <p>Semester: <?php echo $sem?></p>
 
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Edit Profile
-</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Edit Profile
+                </button>
+                <br><br>
+                <form action="UserProfile.php" method="POST">
+                    <button type="submit" class="btn btn-secondary" id="submit2" name="submit2">Log Out</button>
+                </form>
+            </div>
+        </div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -130,10 +148,7 @@ for (var i = 0; i < semesterDropdown.options.length; i++) {
       </form>
     </div>
   </div>
-</div><br><br>
-<form action="UserProfile.php" method="POST">
-<button type="submit" class="btn btn-secondary" id="submit2" name="submit2">Log Out</button>
-</form>
+</div>
 
 
 <section class="py-5 border-bottom">

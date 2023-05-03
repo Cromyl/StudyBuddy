@@ -26,7 +26,7 @@
     $sql3="SELECT * FROM Student WHERE Rollno='$temp'";
     $query3=mysqli_query($conn,$sql3);
     $row3=mysqli_fetch_array($query3);
-    $sem=$row3[0];
+    @$sem=$row3[0];
 
     if((isset($_POST['Answer']))){
         $Answer=$_POST['Answer'];
@@ -69,7 +69,7 @@
                         <!-- <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Services</a></li> -->
-                        <a href="Annoucement.php"><i style="color:white;font-size: 30px;" class="bi bi-bell"></i></a>
+                        <!-- <a href="Annoucement.php"><i style="color:white;font-size: 30px;" class="bi bi-bell"></i></a> -->
                         
                     </ul>
                 </div>
