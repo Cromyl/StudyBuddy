@@ -92,7 +92,11 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="styles.css" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-img" style="height: max-height;
+  background-image: url(img3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <a class="navbar-brand" href="#!" style="font-size:40px; font-weight:bold;">StudyBuddy</a>
@@ -122,7 +126,7 @@
     <input type="password" name="password2" id="password2" required placeholder="Re-type Password"><br><br>
     <input type="submit" name="submit" id="submit">
     </form> -->
-    <section class="bg-light py-5">
+    <section class=" py-5">
         <div class="container px-5 my-5 px-5">
             <div class="text-center mb-5">
               <h2 class="fw-bolder">REGISTER</h2><br><br>

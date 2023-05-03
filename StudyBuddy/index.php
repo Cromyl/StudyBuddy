@@ -48,7 +48,7 @@
                     <div class="col-lg-6">
                         <div class="text-center my-5">
                             <h1 class="display-5 fw-bolder text-white mb-2">Study Buddy</h1>
-                            <p class="lead text-white-50 mb-4">Don't Just Learn, Experience!<br>Don't Just Read, Absorb!<br> Don't Just Think, Ponder! <br> Don't Just Dream, Do! <br> - Roy T. Bennett</p>
+                            <p class="lead text-white-50 mb-4" >Don't Just Learn, Experience!<br>Don't Just Read, Absorb!<br> Don't Just Think, Ponder! <br> Don't Just Dream, Do! <br> - Roy T. Bennett</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
                                 <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
                                 <!-- <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a> -->
@@ -64,29 +64,29 @@
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
-                        <h2 class="h4 fw-bolder">Study Material</h2>
-                        <p>Get Subjectwise Notes, Assignments, Previous Year Question Papers and Reference Books at one place. Ofcourse Study Buddy makes it Easy!</p>
-                        <a class="text-decoration-none" href="Subject.php">
+                        <h2 class="h4 fw-bolder" style="font-size:30px;">Study Material</h2>
+                        <p style="font-size:20px;">Get Subjectwise Notes, Assignments, Previous Year Question Papers and Reference Books at one place. Ofcourse Study Buddy makes it Easy!</p>
+                        <a class="text-decoration-none" href="Subject.php" style="font-weight:bold;">
                             View Study Material
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
-                        <h2 class="h4 fw-bolder">Discussion Page</h2>
-                        <p>Stuck Somewhere? Don't Worry Use our discussion feature to ask your doubt or have a look at previously asked questions.</p>
-                        <a class="text-decoration-none" href="DiscussionPage.php">
+                        <h2 class="h4 fw-bolder" style="font-size:30px;">Discussion Page</h2>
+                        <p style="font-size:20px;">Stuck Somewhere? Don't Worry Use our discussion feature to ask your doubt or have a look at previously asked questions.</p>
+                        <a class="text-decoration-none" href="DiscussionPage.php" style="font-weight:bold;">
                             Ask Doubt
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                     <div class="col-lg-4">
                         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                        <h2 class="h4 fw-bolder">Announcements</h2>
-                        <p>Check for new Updates regarding Assignment deadlines, upcoming exams,new doubts,their answers and much more.</p>
-                        <a class="text-decoration-none" href="Annoucement.php">
+                        <h2 class="h4 fw-bolder" style="font-size:30px;">Announcements</h2>
+                        <p style="font-size:20px;">Check for new Updates regarding Assignment deadlines, upcoming exams,new doubts,their answers and much more.</p>
+                        <a class="text-decoration-none" href="Annoucement.php" style="font-weight:bold;">
                             View Announcements
-                            <i class="bi bi-arrow-right"></i>
+                            <i class="bi bi-arrow-right" ></i>
                         </a>
                     </div>
                 </div>
@@ -261,9 +261,9 @@
                         <div class="card mb-4">
                             <div class="card-body p-4">
                                 <div class="d-flex">
-                                    <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                    <div class="flex-shrink-0"><i class="bi bi-bookmarks-fill" style="font-size:30px; height:3rem; color:#0d6efd"></i></div>
                                     <div class="ms-4">
-                                        <p class="mb-1">Never Lose Hope And Keep On Working.The Road to Success is Through Commitment.</p>
+                                        <p style="font-size:20px;" class="mb-1">Never Lose Hope And Keep On Working.The Road to Success is Through Commitment.</p>
                                         <!-- <div class="small text-muted">- Client Name, Location</div>  -->
                                     </div>
                                 </div>
@@ -273,9 +273,9 @@
                         <div class="card">
                             <div class="card-body p-4">
                                 <div class="d-flex">
-                                    <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                    <div class="flex-shrink-0"><i class="bi bi-bookmarks-fill" style="font-size:30px; height:3rem; color:#0d6efd"></i></div>
                                     <div class="ms-4">
-                                        <p class="mb-1">Define Success on your own Terms,Achieve it by your own Rules,and Build a Life you're Proud to Live. </p>
+                                        <p style="font-size:20px;" class="mb-1">Define Success on your own Terms,Achieve it by your own Rules,and Build a Life you're Proud to Live. </p>
                                         <!-- <div class="small text-muted">- Client Name, Location</div> -->
                                     </div>
                                 </div>

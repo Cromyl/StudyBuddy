@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeleteDiscussion</title>
 </head>
-<body>
+<body class="bg-img" style="height: max-height;
+  background-image: url(img3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;">
     <form action="" method="post">
     <h3>Delete Discussion</h3>
     <label for="">Enter Question ID:</label><br><br>

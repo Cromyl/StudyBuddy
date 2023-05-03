@@ -31,7 +31,11 @@
     }
 </style>
 </head>
-<body>
+<body class="bg-img" style="height: max-height;
+  background-image: url(img3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
             <h1 class="navbar-brand" style="font-size:40px; font-weight:bold;">StudyBuddy</h1>
