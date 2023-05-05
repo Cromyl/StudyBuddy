@@ -207,6 +207,21 @@ body{
                 z-index:2;
             }
 
+            .section{
+    z-index: 2;
+}
+.form{
+    z-index: 2;
+}
+.form-floating{
+    z-index: 2;
+}
+.btn{
+    z-index: 2;
+}
+.d-grid{
+    z-index: 2;
+}
 
 @keyframes animate {
 
