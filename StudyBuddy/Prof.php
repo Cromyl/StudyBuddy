@@ -86,6 +86,17 @@
                             </div>
                         </div>
 
+                        <div class="card mb-4">
+                            <div class="card-body p-4">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0"><i class="bi bi-chat-text" style="font-size:30px; height:3rem; color:#0d6efd;"></i></div>
+                                    <div class="ms-4">
+                                        <p class="mb-1"><a style="color:#1c5cb9; font-size:30px; font-weight:bold; text-decoration:none;" href="/StudyBuddy/StudyBuddy/chat3/users.php">Interact With Students</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                      </div>
                 </div>
             </div>
