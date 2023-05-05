@@ -43,8 +43,15 @@ for (var i = 0; i < semesterDropdown.options.length; i++) {
         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
         border-radius: 40px;
     }
+.card{
+    box-shadow: 0 0 20px 2px rgba(0,0,0,.1);
+    transition:0.7s;
+}
+.card:hover{
+    transform:scale(1.1);
+    z-index:2;
+}
 </style>
-    
 
 </head>
 <body>
@@ -89,7 +96,7 @@ for (var i = 0; i < semesterDropdown.options.length; i++) {
 <div>
         
         <br>
-        <div class="card2 text-center mx-auto" style="width: 28rem;">
+        <div class="card card2 text-center mx-auto" style="width: 28rem;">
             <div class="card-body">
                 <h1>Student Profile</h1>
                 <p>Name: <?php echo $name?></p>
