@@ -206,7 +206,8 @@ body{
             </ul>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="#!">Announcements!!</a>
+                <!-- <a class="navbar-brand" href="#!">Announcements!!</a> -->
+                <h1 class="navbar-brand" style="font-size:30px; font-weight:bold;">Announcements!</h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -218,7 +219,7 @@ body{
                 </div>
             </div>
         </nav>
-<section class="py-5 border-bottom">
+<section class="py-5 ">
     <div class="container px-5 my-5 px-5">
         <div class="text-center mb-5">
             <h1 style="color: white"><b>Announcements</b></h1>

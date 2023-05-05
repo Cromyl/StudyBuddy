@@ -191,7 +191,7 @@ body{
 
 </head>
 
-<body class="" style="">
+<body class="area">
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -209,10 +209,10 @@ body{
             </div>
             <a class="btn btn-primary btn-lg px-4 me-sm-3" href="UploadDoubt.php" style="">Upload Your Question</a>
         </nav>
-        <section class="py-5 border-bottom area">
+        <section class="py-5 " style="height:max-height;">
             <div class="container px-5 my-5 px-5">
                 <div class="text-center mb-5">
-                    <h1 style="color: white">Discussion Page</h1>
+                    <h1 style="color: white; font-weight:bold;">Discussion Page</h1>
                    
                 </div>
                 <div class="row gx-5 justify-content-center">
