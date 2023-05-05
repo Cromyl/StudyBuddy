@@ -155,6 +155,14 @@ body{
 .navbar{
     z-index: 2;
 }
+.card{
+                box-shadow: 0 0 20px 2px rgba(0,0,0,.1);
+                transition:0.7s;
+            }
+            .card:hover{
+                transform:scale(1.1);
+                z-index:2;
+            }
 
 
 @keyframes animate {
@@ -231,7 +239,7 @@ body{
                     
                     <?php
                     $id=$row['D_Id'];
-                    echo "<button class=\"btn btn-primary btn-lg \"><a class=\"text-decoration-none\" style=\"color:white\" href=post.php?id=$id>Answer</a></button>";
+                    echo "<button  class=\"btn btn-primary btn-lg \"><a class=\"text-decoration-none\" style=\"color:white\" href=post.php?id=$id>Answer</a></button>";
                     ?>
                 
         
