@@ -104,7 +104,70 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+#title {
+    position: absolute;
+  font-weight: 300;
+  top: 36%;
+  left: 0;
+  right: 0;
+  margin-top: -200px;
+  font-size: 130px;
+  text-align: center;
+  letter-spacing: 20px;
+  padding-left: 20px;
+  background: -webkit-linear-gradient(white, #dbdde0, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-name: animGravity;
+}
 
+#subtitle {
+  position: absolute;
+  margin-top: -200px;
+  font-weight: 300;
+  top: 70%;
+  left: 0;
+  right: 0;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 6px;
+}
+#subtitle span {
+  color: #d8d8d8;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+#subtitle span:nth-child(1) {
+  animation-name: animDont;
+}
+#subtitle span:nth-child(2) {
+  animation-name: animLet;
+}
+#subtitle span:nth-child(3) {
+  animation-name: animGo;
+}
+@keyframes animGravity {
+  0% {
+    transform: translateY(-26px);
+    opacity: 0;
+  }
+  30%, 80% {
+    letter-spacing: 40px;
+    padding-left: 40px;
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  92%, 100% {
+    letter-spacing: 35px;
+    padding-left: 35px;
+    transform: translateY(-4px);
+    opacity: 0;
+  }
+}
 @keyframes animStar {
   from {
     transform: translateY(0px);
@@ -114,6 +177,48 @@
   }
 }
 
+@keyframes animDont {
+  0%	, 15% {
+    transform: translateY(-26px);
+    opacity: 0;
+  }
+  35%, 80% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  92%, 100% {
+    transform: translateY(-4px);
+    opacity: 0;
+  }
+}
+@keyframes animLet {
+  0%	, 25% {
+    transform: translateY(-26px);
+    opacity: 0;
+  }
+  45%, 80% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  92%, 100% {
+    transform: translateY(-4px);
+    opacity: 0;
+  }
+}
+@keyframes animGo {
+  0%	, 35% {
+    transform: translateY(-26px);
+    opacity: 0;
+  }
+  55%, 80% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  92%, 100% {
+    transform: translateY(-4px);
+    opacity: 0;
+  }
+}
 
 
    </style>
@@ -145,15 +250,15 @@
         <div id='stars'></div>
             <div id='stars2'></div>
             <div id='stars3'></div>
-        <header class="bg-dark py-5"  id="bgcolor">
+        <header class="bg-dark py-4" style="height: 650px;" id="bgcolor">
             <div class="container px-5" >
                 <div class="row gx-5 justify-content-center" >
                     <div class="col-lg-6">
                         <div class="text-center my-5" >
-                            <h1 class="display-5 fw-bolder text-white mb-2">Study Buddy</h1>
-                            <p class="lead text-white-50 mb-4" >Don't Just Learn, Experience!<br>Don't Just Read, Absorb!<br> Don't Just Think, Ponder! <br> Don't Just Dream, Do! <br> - Roy T. Bennett</p>
+                            <h1 id="title" class="display-10 mb-5">Study Buddy</h1>
+                            <p id="subtitle" class="lead text-white-50 mb-4" >Don't Just Learn, Experience!<br>Don't Just Read, Absorb!<br> Don't Just Think, Ponder! <br> Don't Just Dream, Do! <br> - Roy T. Bennett</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
+                                <!-- <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a> -->
                                 <!-- <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a> -->
                             </div>
                         </div>

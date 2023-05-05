@@ -158,7 +158,14 @@ body{
     animation-duration: 11s;
 }
 
-
+.card{
+    box-shadow: 0 0 20px 2px rgba(0,0,0,.1);
+    transition:0.7s;
+    }
+    .card:hover{
+    transform:scale(1.1);
+    z-index:2;
+    }
 
 
 @keyframes animate {
