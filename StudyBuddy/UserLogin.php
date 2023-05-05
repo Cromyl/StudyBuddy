@@ -12,13 +12,87 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
         <link href="styles.css" rel="stylesheet" />
+        <style>
+        body {
+        
+    }
+    body::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.7;
+        z-index: -1;
+    }
+</style>
+
+<style>
+    html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+</style>
+
 
 </head>
-<body class="bg-img" style="height: max-height;
-  background-image: url(img3.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;">
+<body class="" style="">
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <a class="navbar-brand" href="#!"style="font-size:40px; font-weight:bold;">StudyBuddy</a>
@@ -65,7 +139,7 @@
     <section class=" py-5">
         <div class="container px-5 my-5 px-5">
             <div class="text-center mb-5">
-              <h2 class="fw-bolder">LOGIN</h2><br><br>
+              <h2 class="fw-bolder" style="color: white">LOGIN</h2><br><br>
 
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-4">

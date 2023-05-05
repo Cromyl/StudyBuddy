@@ -66,11 +66,12 @@
   background-size: cover;">
 <?php
     if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
-        if(isset($_POST['name'])&& isset($_POST['Roll_Number']) && isset($_POST['Semester']) && isset($_POST['password'])){
+        if(isset($_POST['name'])&& isset($_POST['Roll_Number']) && isset($_POST['Semester']) && isset($_POST['password']) && isset($_POST['Email'])){
             $name=$_POST['name'];
             $rollnumber=$_POST['Roll_Number'];
             $semester=$_POST['Semester'];
             $password=$_POST['password'];
+            $email=$_POST['Email'];
 
             $sql2="SELECT count(*) FROM Student WHERE Rollno='$rollnumber'";
             $query2=mysqli_query($conn,$sql2);
@@ -81,7 +82,7 @@
                 header("Location: RegisterUser.php?msg=failed");
             }
             else{
-                $sql="INSERT INTO  Student VALUES ('$rollnumber','$name','$semester','$password')";
+                $sql="INSERT INTO  Student VALUES ('$rollnumber','$name','$semester','$password','$email')";
                 $query =mysqli_query($conn,$sql);
                 if($query){
                     
@@ -128,6 +129,12 @@
                                 <input  class="form-control" type="number" name="Semester" id="Semester" required placeholder="Semester" min="1" max="8"> 
                                 <label for="Semester">Semester:</label>
                             </div>
+
+                            <div class="mb-3 form-floating" >
+                                <input  class="form-control" type="text" name="Email" id="Email" required placeholder="Email">
+                                <label for="Email">Email:</label>
+                            </div>
+
                             <div class="mb-3 form-floating">                        
                                 <input class="form-control" type="password" name="password" id="password" required placeholder="Password">
                                 <label for="password">Password:</label>

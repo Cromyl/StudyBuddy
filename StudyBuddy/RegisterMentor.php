@@ -1,11 +1,12 @@
 <?php
     $conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
     if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
-        if(isset($_POST['name'])&& isset($_POST['type']) && isset($_POST['UserID']) && isset($_POST['password'])){
+        if(isset($_POST['name'])&& isset($_POST['type']) && isset($_POST['UserID']) && isset($_POST['password']) && isset($_POST['email'])){
             $UserID=$_POST['UserID'];
             $name=$_POST['name'];
             $type=$_POST['type'];
             $password=$_POST['password'];
+            $email=$_POST['email'];
 
             $sql2="SELECT count(*) FROM Mentor WHERE id='$UserID'";
             $query2=mysqli_query($conn,$sql2);
@@ -16,7 +17,7 @@
                 header("Location: RegisterMentor.php?msg=failed");
             }
             else{
-                $sql="INSERT INTO Mentor VALUES ('$UserID','$name','$type','$password')";
+                $sql="INSERT INTO Mentor VALUES ('$UserID','$name','$type','$password','$email')";
                 $query =mysqli_query($conn,$sql);
                 if($query){
                     header("Location: MentorLogin.php");
@@ -152,6 +153,12 @@
                                 <option value="T">Teaching Assistant</option>
                             </select>
                             </div>
+
+                            <div class="mb-3 form-floating">                        
+                                <input class="form-control" type="email" name="email" id="email" required placeholder="Email">    
+                                <label for="email">Email:</label>
+                            </div>
+
                             <div class="mb-3 form-floating">                        
                                 <input class="form-control" type="password" name="password" id="password" required placeholder="Password">    
                                 <label for="password">Password:</label>

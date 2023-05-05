@@ -13,6 +13,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+   
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -24,8 +25,41 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="styles.css" rel="stylesheet" />
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.18.11/tsparticles.min.js"> </script>
+   <style>
+      html, body {
+  width: 100%;
+  height:100%;
+}
+
+#bgcolor {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+   </style>
+   
+
+   
+        
     </head>
-    <body>
+    <body >
+    
+
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
@@ -38,14 +72,17 @@
                     </ul>
                 </div>
             </div>
-            <a class="btn btn-primary btn-lg px-3 me-sm-3" href="UserLogin.php">Log Out</a>
+            <a class="btn btn-primary btn-lg px-3 me-sm-3" href="UserProfile.php">Profile Page</a>
+            <br><br>
+            <!-- <a class="btn btn-primary btn-lg px-3 me-sm-3" href="UserLogin.php">Log Out</a> -->
         </nav>
         <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-5">
-                <div class="row gx-5 justify-content-center">
+        <header class="bg-dark py-5"  id="bgcolor">
+        
+            <div class="container px-5" >
+                <div class="row gx-5 justify-content-center" >
                     <div class="col-lg-6">
-                        <div class="text-center my-5">
+                        <div class="text-center my-5" >
                             <h1 class="display-5 fw-bolder text-white mb-2">Study Buddy</h1>
                             <p class="lead text-white-50 mb-4" >Don't Just Learn, Experience!<br>Don't Just Read, Absorb!<br> Don't Just Think, Ponder! <br> Don't Just Dream, Do! <br> - Roy T. Bennett</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
@@ -56,12 +93,14 @@
                     </div>
                 </div>
             </div>
+
+          
         </header>
         <!-- Features section-->
         <section class="py-5 border-bottom" id="features">
             <div class="container px-5 my-5">
-                <div class="row gx-5">
-                    <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="row gx-5 ">
+                    <div class="col-lg-4 mb-5 mb-lg-5 ">
                         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
                         <h2 class="h4 fw-bolder" style="font-size:30px;">Study Material</h2>
                         <p style="font-size:20px;">Get Subjectwise Notes, Assignments, Previous Year Question Papers and Reference Books at one place. Ofcourse Study Buddy makes it Easy!</p>
@@ -70,7 +109,7 @@
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
-                    <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="col-lg-4 mb-5 mb-lg-5">
                         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
                         <h2 class="h4 fw-bolder" style="font-size:30px;">Discussion Page</h2>
                         <p style="font-size:20px;">Stuck Somewhere? Don't Worry Use our discussion feature to ask your doubt or have a look at previously asked questions.</p>
@@ -88,9 +127,39 @@
                             <i class="bi bi-arrow-right" ></i>
                         </a>
                     </div>
+                    <div class="col-lg-4" margin='5px'>
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-text"></i></div>
+                        <h2 class="h4 fw-bolder" style="font-size:30px;">Connect With Students</h2>
+                        <p style="font-size:20px;">Chat with other students and get your doubts cleared.</p>
+                        <a class="text-decoration-none" href="/StudyBuddy/StudyBuddy/chat/users.php" style="font-weight:bold;">
+                            Goto Chat
+                            <i class="bi bi-arrow-right" ></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-4" margin='5px'>
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-square"></i></div>
+                        <h2 class="h4 fw-bolder" style="font-size:30px;">Connect With Mentors</h2>
+                        <p style="font-size:20px;">Get your doubts clarified directly from your mentors.</p>
+                        <a class="text-decoration-none" href="/StudyBuddy/StudyBuddy/chat2/users.php" style="font-weight:bold;" >
+                            Goto Chat
+                            <i class="bi bi-arrow-right" ></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-4" margin='5px'>
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-calendar"></i></div>
+                        <h2 class="h4 fw-bolder" style="font-size:30px;">Check Time Table</h2>
+                        <p style="font-size:20px;">See the schedule of classes as per the latest timetable.</p>
+                        <a class="text-decoration-none" href="<?php echo '/StudyBuddy/StudyBuddy/time table/'.$sem.'.png'; ?>" style="font-weight:bold;" >
+                            Open TimeTable
+                            <i class="bi bi-arrow-right" ></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
+
+
+  
         <!-- Pricing section-->
         <!-- <section class="bg-light py-5 border-bottom">
             <div class="container px-5 my-5">
@@ -284,6 +353,9 @@
                 </div>
             </div>
         </section>
+
+
+        
     
         <!-- Footer-->
         <footer class="py-5 bg-dark">
