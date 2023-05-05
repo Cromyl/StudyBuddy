@@ -118,10 +118,6 @@
   background: -webkit-linear-gradient(white, #dbdde0, #38495a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease;
-  animation-name: animGravity;
 }
 
 #subtitle {
