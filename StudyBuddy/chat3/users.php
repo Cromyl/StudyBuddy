@@ -6,7 +6,7 @@
   }
 ?>
 <?php  include_once "header.php"; ?>
-<body class="bg">
+<body class="area">
 <div class="bg"></div>
 <div class="bg bg2"></div>
 <div class="bg bg3"></div>

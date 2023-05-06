@@ -81,6 +81,10 @@ body{
     bottom: -150px;
     
 }
+.circles ul{
+    height: 300%;
+    overflow:overflow-y;
+}
 
 .circles li:nth-child(1){
     left: 25%;
