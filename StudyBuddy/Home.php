@@ -1,3 +1,10 @@
+<?php 
+session_start();
+session_destroy();
+header("Cache-Control: private, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+header("Expires: Fri, 4 Jun 2010 12:00:00 GMT");
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +18,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
     <title>Admin</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
+    <style> 
       html {
   height: 100%;
   width:100%;
@@ -153,11 +160,23 @@ h2.effect{
   animation: lights 5s 750ms linear infinite;
 }
    </style>
+
+
+
+<style>
+
+  /* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #ffffff; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #000000; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+</style>
+
+<script>
+  particlesJS("particles-js", {"particles":{"number":{"value":307,"density":{"enable":true,"value_area":800}},"color":{"value":"#000000"},"shape":{"type":"edge","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#000000","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":1119.552179128349,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":133.64327774312954,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+</script>
   
   
 </head>
-<body>  
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+<body >  
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"  >
             <div class="container px-5">
             <h1 class="navbar-brand" style="font-size:40px; font-weight:bold;">StudyBuddy</h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -184,9 +203,11 @@ h2.effect{
                 </div>
             </div>
         </header>
-        <section class="py-5 border-bottom">
-            <div class="container px-5 my-5 px-5">
-                <div class="text-center mb-5">
+        <section class="py-5 border-bottom" >
+        <script src="particles.js"></script>
+        <script src="app.js"></script>
+            <div class="container px-5 my-5 px-5 ">
+                <div class="text-center mb-5 " >
                     <h1 class="fw-bolder" style="font-weight=bold; text-shadow: 0 0 3px #0d6efd">Select Your Role</h1>
                 </div>
                 <div class="row gx-5 justify-content-center">
@@ -221,6 +242,8 @@ h2.effect{
                 </div>
             </div>
         </section>
+
+        
           
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -231,5 +254,7 @@ h2.effect{
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+        <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 </body>
 </html>

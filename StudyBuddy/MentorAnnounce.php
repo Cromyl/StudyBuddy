@@ -218,7 +218,16 @@ body{
         border-radius: 50%;
     }
 
-}        </style>
+}  
+
+.first {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  &:hover {
+    box-shadow: 0 0 40px 40px $red inset;
+  }
+}
+
+</style>
 
 
     <title>Admin Announcement</title>
@@ -226,7 +235,7 @@ body{
 <body class="area">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="#!">Admin Announcement!!</a>
+                <a class="navbar-brand" href="Prof.php" style="font-size: 40px"><b>StudyBuddy</b></a>
                 <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -237,12 +246,12 @@ body{
                     </ul>
                 </div> -->
             </div>
-            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="AddAnnouncement.php">Announce Something</a>
+            <a class="btn  btn-primary btn-lg px-4 me-sm-3 " href="AddAnnouncement.php" style="width: 300px">Announce Something</a>
         </nav>
 <section class="py-5">
     <div class="container px-5 my-5 px-5">
         <div class="text-center mb-5">
-            <h1 class="fw-bolder">Announcements</h1>
+            <h1 class="fw-bolder" style="color: white">Announcements</h1>
             <div>
                 <div   class="d-flex flex-row justify-content-end"class="form-floating mb-3">
                     <form class="d-flex flex-row justify-content-end" method="post">
@@ -273,26 +282,27 @@ body{
                     while($row=mysqli_fetch_assoc($result)){
                 ?>
                 <div class="card mb-4">
-                    <div class="card-body p-4">
-                        <div class="d-flex">
+                    <div class="card-body p-4 " style="text-align :center">
+                        <div class="d-flex" style="justify-content:center">
                             <div class="ms-4">
-                                <div class="d-flex flex-row">
-                                    <div class="p-2"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                <div class="d-flex flex-row " style="justify-content:center">
+                                    <div class="p-2"><i class="bi bi-chat-right-quote-fill text-primary fs-1" ></i></div>
                                     <!-- Add a form for the delete button -->
-                                         <div class="p-2" style="margin-top: 0.7rem"><h5 class="mb-1"><?php echo $row['Post'];?> </h5></div>
+                                         <div class="p-2" style="margin-top: 0.7rem "><h5 class="mb-1"><?php echo $row['Post'];?> </h5></div>
                                         
                                 </div>
                                 <?php 
+                                
                                     echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Semester: ';
                                     $id=$row['Semester'];
                                     if($id=='9') echo "All semesters&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp ";
                                     else echo $id.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
                                     echo 'Announcer: '.$name;
-                                ?><br>
-                                <div class="justify-content-right-end" >
+                                ?><br><br>
+                                <div class=" " style="justify-content:center">
                                     <form method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this announcement?');">
                                         <input type="hidden" name="delete" value="<?php echo $row['Ann_no']; ?>">
-                                        <button type="submit" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i> Delete</button>
+                                        <button type="submit" class="btn btn-danger " style="width: 70%"><i class="bi bi-trash"></i> Delete</button>
                                     </form>
                                 </div>
                                     

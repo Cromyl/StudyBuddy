@@ -177,7 +177,7 @@ h4,
 
 @media (min-width: 1200px) {
 
-  h4,
+  nh4,
   .h4 {
     font-size: 1.5rem;
   }
@@ -4140,6 +4140,7 @@ fieldset:disabled .btn {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  
 }
 
 .nav-link {
@@ -4291,6 +4292,7 @@ fieldset:disabled .btn {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  
 }
 
 .navbar>.container,

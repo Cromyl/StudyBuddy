@@ -226,7 +226,7 @@ body{
 <body class="area">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="#!">Mentor Discussion</a>
+                <a class="navbar-brand" href="Prof.php" style="font-size: 40px"><b>StudyBuddy</b></a>
                 <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -242,10 +242,10 @@ body{
 <section class="py-5">
     <div class="container px-5 my-5 px-5">
         <div class="text-center mb-5">
-            <h1>Mentor Discussion</h1><br>
+            <h1 style="color: white">Mentor Discussion</h1><br>
             <div class="d-flex justify-content-end form-floating mb-3">
-                <form class="d-flex justify-content-end form-floating mb-3" method="post">
-                    <select class="form-select" name="semester" id="semester">
+                <form class="d-flex justify-content-end form-floating mb-3" method="post" >
+                    <select class="form-select" name="semester" id="semester" style="padding-top: 15px">
                         <option value="">Filter by Semesters</option>
                         <option value="1" <?php if ($semesterFilter == '1') echo 'selected'; ?>>Semester 1</option>
                         <option value="2" <?php if ($semesterFilter == '2') echo 'selected'; ?>>Semester 2</option>
@@ -257,7 +257,7 @@ body{
                         <option value="8" <?php if ($semesterFilter == '8') echo 'selected'; ?>>Semester 8</option>
                         <!-- Add more semester options as needed -->
                     </select>
-                    <button  class="btn btn-primary btn-lg px-3 me-sm-2" type="submit">Filter</button>
+                    <button  class="btn btn-primary btn-lg px-3 me-sm-2" type="submit" style="margin-left: 8px">Filter</button>
                 </form>
             </div>
         </div>
@@ -268,7 +268,7 @@ body{
                 <div class="card mb-4">
                     <div class="card-body p-4">
                         <div class="d-flex">
-                            <h4 class="mb-1"><?php echo $row['D_Id'] . ". " . $row['Doubt'];?></h4>
+                            <h4 class="mb-1"><?php echo $row['Doubt'];?></h4>
                         </div>
                         <div class="ms-4">
                             <p class="mb-1">
@@ -285,7 +285,7 @@ body{
                             <div class=" d-flex justify-content-end">
                                 <div class="mx-3">
 
-                                    <form method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this announcement?');">
+                                    <form method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this discussion?');">
                                         <input type="hidden" name="delete" value="<?php echo $row['D_Id']; ?>">
                                         <button type="submit" class="btn btn-danger btn-lg"><i class="bi bi-trash"></i> Delete</button>
                                     </form>

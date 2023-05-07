@@ -207,7 +207,7 @@ body{
                     </ul>
                 </div>
             </div>
-            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="UploadDoubt.php" style="">Upload Your Question</a>
+            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="UploadDoubt.php" style="width: 300px">Upload Your Question</a>
         </nav>
         <section class="py-5 " style="height:max-height;">
             <div class="container px-5 my-5 px-5">

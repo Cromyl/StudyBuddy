@@ -214,14 +214,18 @@ body{
 
             <div class="container px-5 my-5 px-5">
                 <div class="text-center mb-5">
-                    <h1 class="fw-bolder"><?php echo $subject?></h1>
+                    <h1 class="fw-bolder" style="color: white"><?php echo $subject?></h1>
                 </div>
                 <div class="row gx-5 justify-content-center">
                    <?php
+                   $i=0;
                    foreach($scan as $file) {
+                        
                       if (!is_dir("myFolder/$file")) {
                          if($file=='ignore.txt') continue;
                          else{
+                            $i++;
+                            if($i<3) continue;
                             $msg=explode('.',$file)[1];
                             $fin=$path.'/'.$file;
                             ?>

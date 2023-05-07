@@ -209,12 +209,12 @@ body{
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 </div>
             </div>
-            <a class="btn btn-primary btn-lg px-3 me-sm-3" href="MentorLogin.php">Log Out</a>
+            <a class="btn btn-primary btn-lg px-3 me-sm-3" href="home.php">Log Out</a>
         </nav>
    <section class="py-5 "style="height:max-height;" >
             <div class="container px-5 my-5 px-5">
                 <div class="text-center mb-5">
-                    <h1 class="fw-bolder">Welcome <?php echo $name;?>!</h1>
+                    <h1 class="fw-bolder" style="color: white">Welcome <?php echo $name;?>!</h1>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">

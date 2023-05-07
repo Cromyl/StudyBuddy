@@ -6,8 +6,15 @@
   }
 ?>
 <?php include_once "header.php"; ?>
-<body>
-  <div class="wrapper">
+
+
+
+<body class="area">
+
+
+
+
+  <div class="wrapper" style="margin-top: 90px" style="z-index: 3">
     <section class="chat-area">
       <header>
         <?php 
@@ -43,5 +50,25 @@
 
   <script src="javascript/chat.js"></script>
 
+  <!-- <ul class="circles" >
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul> -->
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+                <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+                
 </body>
+
+<?php include_once "navigation.php";?>
 </html>

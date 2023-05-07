@@ -21,7 +21,7 @@
         $row2=mysqli_fetch_array($r);
        // $newid=print_r($row2[0]+1);
         $newid=$row2[0]+1;
-        $query="INSERT INTO Doubt VALUES ('$newid','$subject','$sem','$desc','$title')";
+        $query="INSERT INTO Doubt VALUES ('$newid','$temp','$subject','$sem','$desc','$title')";
         $result=mysqli_query($conn,$query);
         echo 'Question Uploded Successfully';
         header("Location: DiscussionPage.php");
@@ -268,7 +268,7 @@ body{
 <body class="area">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="#!" style="font-size:40px; font-weight:bold;">StudyBuddy</a>
+                <a class="navbar-brand" href="index.php" style="font-size:40px; font-weight:bold;">StudyBuddy</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -284,7 +284,7 @@ body{
             <div class="container px-5 my-5 px-5">
                 <div class="text-center mb-5">
                     <form name="myform" action="UploadDoubt.php" onsubmit="return validate()" method="post" enctype="multipart/form-data">
-                    <h2 class="fw-bolder">Post Your Doubt</h2>
+                    <h2 class="fw-bolder" style="color: white">Post Your Doubt</h2>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">

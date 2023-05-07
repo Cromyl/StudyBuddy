@@ -6,7 +6,29 @@
   }
 ?>
 <?php  include_once "header.php"; ?>
-<body class="bg">
+<head>
+<link href="style.css" rel="stylesheet" />
+<style>
+  p,.p{
+    color: #67676a;
+    word-wrap: break-word;
+    padding: 0px;
+    margin:0px;
+    text-decoration:none;
+  
+              background: #333;
+  color: black;
+  font-color: black;
+  border-radius: 18px 18px 0 18px;
+  background: #fff;
+  color: #333;
+  border-radius: 18px 18px 18px 0;
+  font-size: 15px;
+}
+</style>
+</head>
+
+<body class="area">
 <div class="bg"></div>
 <div class="bg bg2"></div>
 <div class="bg bg3"></div>
@@ -21,8 +43,8 @@
             }
           ?>
           <!-- <img src="php/images/<?php //echo $row['img']; ?>" alt=""> -->
-          <div class="details">
-            <span><?php echo $row['Name']?></span>
+          <div class="details" style="">
+            <span style=""><?php echo $row['Name']?></span>
             <p><?php// echo $row['status']; ?></p>
           </div>
         </div>
@@ -33,8 +55,8 @@
         <input type="text" placeholder="Enter name to search...">
         <button><i class="fas fa-search"></i></button>
       </div>
-      <div class="users-list">
-  
+      <div class="users-list" style="color: black;text-decoration:none;">
+              <hr><hr>
       </div>
     </section>
   </div>
@@ -42,4 +64,5 @@
   <script src="javascript/users.js"></script>
 
 </body>
+<?php include_once "navigation.php";?>
 </html>

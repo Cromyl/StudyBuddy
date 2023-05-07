@@ -6,7 +6,26 @@
   }
 ?>
 <?php  include_once "header.php"; ?>
-<body>
+<head>
+  <style>
+    .position{
+      background-color: black;
+    }
+  </style>
+</head>
+<body class="area">
+<ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
   <div class="wrapper">
     <section class="users">
       <header>
@@ -39,4 +58,5 @@
   <script src="javascript/users.js"></script>
 
 </body>
+<?php include_once "navigation.php"; ?>
 </html>

@@ -6,8 +6,20 @@
   }
 ?>
 <?php include_once "header.php"; ?>
-<body>
-  <div class="wrapper">
+<body class="area">
+<ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+  <div class="wrapper" style="margin: 100px">
     <section class="chat-area">
       <header>
         <?php 
@@ -44,4 +56,5 @@
   <script src="javascript/chat.js"></script>
 
 </body>
+<?php include_once "navigation.php" ?>
 </html>
