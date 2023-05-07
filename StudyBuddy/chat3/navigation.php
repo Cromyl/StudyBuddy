@@ -219,7 +219,7 @@ body{
   flex-wrap: wrap;">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark position">
             <div class="container px-5">
-            <a class="navbar-brand" href="#" style="font-size:40px; font-weight:bold;">StudyBuddy</a>
+            <a class="navbar-brand" href="/StudyBuddy/StudyBuddy/prof.php" style="font-size:40px; font-weight:bold;">StudyBuddy</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 </div>

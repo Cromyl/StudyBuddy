@@ -189,7 +189,9 @@ body{
 }
 
 
-
+.round-box {
+    border-radius: 50px;
+}
 
 
         </style>
@@ -211,7 +213,7 @@ body{
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <!-- <a class="navbar-brand" href="#!">Announcements!!</a> -->
-                <h1 class="navbar-brand" style="font-size:30px; font-weight:bold;">Announcements!</h1>
+                <a class="navbar-brand" href="index.php" style="font-size:30px; font-weight:bold;">StudyBuddy</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -233,19 +235,32 @@ body{
             <?php
                 while($row=mysqli_fetch_assoc($result)){
                 ?>
-                <div class="card mb-4">
-                    <div class="card-body p-4">
-                        <div class="d-flex">
+                <div class="card mb-4 ">
+                    <div class="card-body p-4 " style="text-align :center">
+                        <div class="d-flex " style="justify-content:center">
                             <div class="ms-4">
-                            
-                                   
-                          
-                            <div class="d-flex flex-row">
-                            <div class="p-2"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
-                            <div class="p-2" style="margin-top: 0.7rem"><h5 class="mb-1"><?php echo $row['Post'];?> </h5></div>
-                            
-                            </div>
+                                <div class="d-flex flex-row " style="justify-content:center">
+                                    <div class="p-2"><i class="bi bi-chat-right-quote-fill text-primary fs-1" ></i></div>
+                                    <!-- Add a form for the delete button -->
+                                         <div class="p-2" style="margin-top: 0.7rem "><h5 class="mb-1"><b><?php echo $row['Post'];?> </b></h5></div>
+                                        
+                                </div>
+                                <?php 
                                 
+                                    echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Semester: ';
+                                    $id=$row['Semester'];
+                                    $name=$row['Ann_doer'];
+                                    if($id=='9') echo "All semesters&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp ";
+                                    else echo $id.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+                                    echo 'Announcer: '.$name;
+                                ?><br><br>
+                                <div class=" " style="justify-content:center">
+                                    <form method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this announcement?');">
+                                        <input type="hidden" name="delete" value="<?php echo $row['Ann_no']; ?>">
+                                        
+                                    </form>
+                                </div>
+                                    
                             </div>
                         </div>
                     </div>

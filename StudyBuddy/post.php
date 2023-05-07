@@ -309,7 +309,7 @@ body{
 <body class="area" >
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="#!">StudyBuddy</a>
+                <a class="navbar-brand" href="index.php" style="font-size: 40px"><b>StudyBuddy</b></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -317,7 +317,7 @@ body{
                         <!-- <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Services</a></li> -->
-                        <a href="Annoucement.php"><i style="color:white;font-size: 30px;" class="bi bi-bell"></i></a>
+                        <!-- <a href="Annoucement.php"><i style="color:white;font-size: 30px;" class="bi bi-bell"></i></a> -->
                         
                     </ul>
                 </div>
