@@ -14,13 +14,22 @@
             
             if($row2[0]==1){
                 $failed=1;
-                header("Location: RegisterMentor.php?msg=failed");
+                ?>
+                
+                <script type="text/javascript">
+        window.location.href = 'RegisterMentor.php?msg=failed';
+        </script>
+                <?php
             }
             else{
                 $sql="INSERT INTO Mentor VALUES ('$UserID','$name','$type','$password','$email')";
                 $query =mysqli_query($conn,$sql);
                 if($query){
-                    header("Location: MentorLogin.php");
+                    ?>
+                        <script type="text/javascript">
+        window.location.href = 'MentorLogin.php';
+        </script>
+                    <?php
                 }
                 else{
                     echo 'Value exists';

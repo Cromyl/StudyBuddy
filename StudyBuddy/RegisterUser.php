@@ -260,14 +260,23 @@ body{
 
             if($row2[0]==1){
                 $failed=1;
-                header("Location: RegisterUser.php?msg=failed");
+                ?>
+                
+                <script type="text/javascript">
+        window.location.href = 'RegisterUser.php?msg=failed';
+        </script>
+                <?php
             }
             else{
                 $sql="INSERT INTO  Student VALUES ('$rollnumber','$name','$semester','$password','$email')";
                 $query =mysqli_query($conn,$sql);
                 if($query){
+                    ?>
                     
-                    header("Location: UserLogin.php");
+                    <script type="text/javascript">
+        window.location.href = 'UserLogin.php';
+        </script>
+                    <?php
                 }
                 else{
                     echo 'Value exists';
