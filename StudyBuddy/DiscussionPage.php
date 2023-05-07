@@ -155,6 +155,14 @@ body{
 .navbar{
     z-index: 2;
 }
+.card{
+                box-shadow: 0 0 20px 2px rgba(0,0,0,.1);
+                transition:0.7s;
+            }
+            .card:hover{
+                transform:scale(1.1);
+                z-index:2;
+            }
 
 
 @keyframes animate {
@@ -183,7 +191,7 @@ body{
 
 </head>
 
-<body class="" style="">
+<body class="area">
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -199,12 +207,12 @@ body{
                     </ul>
                 </div>
             </div>
-            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="UploadDoubt.php" style="">Upload Your Question</a>
+            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="UploadDoubt.php" style="width: 300px">Upload Your Question</a>
         </nav>
-        <section class="py-5 border-bottom area">
+        <section class="py-5 " style="height:max-height;">
             <div class="container px-5 my-5 px-5">
                 <div class="text-center mb-5">
-                    <h1 style="color: white">Discussion Page</h1>
+                    <h1 style="color: white; font-weight:bold;">Discussion Page</h1>
                    
                 </div>
                 <div class="row gx-5 justify-content-center">
@@ -231,7 +239,7 @@ body{
                     
                     <?php
                     $id=$row['D_Id'];
-                    echo "<button class=\"btn btn-primary btn-lg \"><a class=\"text-decoration-none\" style=\"color:white\" href=post.php?id=$id>Answer</a></button>";
+                    echo "<button  class=\"btn btn-primary btn-lg \"><a class=\"text-decoration-none\" style=\"color:white\" href=post.php?id=$id>Answer</a></button>";
                     ?>
                 
         

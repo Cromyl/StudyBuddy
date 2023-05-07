@@ -19,7 +19,7 @@
                     <li></li>
                     <li></li>
             </ul>
-  <div class="wrapper">
+  <div class="wrapper" style="margin: 100px">
     <section class="chat-area">
       <header>
         <?php 
@@ -56,4 +56,5 @@
   <script src="javascript/chat.js"></script>
 
 </body>
+<?php include_once "navigation.php" ?>
 </html>

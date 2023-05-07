@@ -6,6 +6,13 @@
   }
 ?>
 <?php  include_once "header.php"; ?>
+<head>
+  <style>
+    .position{
+      background-color: black;
+    }
+  </style>
+</head>
 <body class="area">
 <ul class="circles">
                     <li></li>
@@ -51,4 +58,5 @@
   <script src="javascript/users.js"></script>
 
 </body>
+<?php include_once "navigation.php"; ?>
 </html>

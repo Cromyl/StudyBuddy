@@ -51,4 +51,5 @@
   <script src="javascript/users.js"></script>
 
 </body>
+<?php include_once "navigation.php" ?>
 </html>
