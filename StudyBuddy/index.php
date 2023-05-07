@@ -215,7 +215,22 @@
     opacity: 0;
   }
 }
+.feedback {
+  background-color : #31B0D5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 40px;
+  height: 70px;
+  width:120px;
+  border-color: #46b8da;
+}
 
+#mybutton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  
+}
 
    </style>
    
@@ -225,7 +240,9 @@
     </head>
     <body >
     
-
+    <div id="mybutton">
+<a class="btn btn-primary feedback" title="FeedBack!!" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf78As84oPvKLblXmbVc1_br7xpA2J_J_vPJgqt410rIGNk_Q/viewform?usp=sf_link" ><i class="bi bi-chat-square-dots-fill"></i><br>FeedBack</a>
+</div>
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">

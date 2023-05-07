@@ -226,7 +226,13 @@ body{
             session_start();
             $karo=print_r($row2[0],true);
             $_SESSION["uid"] = $karo;
-            header("location:Admin.php");
+            header("location:Prof.php");
+        }
+        else if($row[0]==1 && $row2['Type']=='T'){
+            session_start();
+            $karo=print_r($row2[0],true);
+            $_SESSION["uid"] = $karo;
+            header("location:Prof.php");
         }
         else {
             echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
