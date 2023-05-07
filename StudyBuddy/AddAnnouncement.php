@@ -205,12 +205,13 @@ body{
 <body class="area" >
 <?php
     if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
-        if(isset($_POST['Semester'])&& isset($_POST['Post'])){
+        if(isset($_POST['Semester']) && isset($_POST['Ann_title']) && isset($_POST['Desr'])){
             $Semester=$_POST['Semester'];
-            $Post=$_POST['Post'];
+            $Ann_title=$_POST['Ann_title'];
+            $Desr=$_POST['Desr'];
             $Ann_doer=$name;
 
-            $sql="INSERT INTO  Announcement VALUES ('NULL','$Semester','$Ann_doer','$Post')";
+            $sql="INSERT INTO  Announcement VALUES ('NULL','$Semester','$Ann_doer','$Ann_title','$Desr')";
             $query =mysqli_query($conn,$sql);
             if($query){
                 
@@ -244,8 +245,12 @@ body{
                     <div class="col-lg-4">
                         <form name="myform" action="AddAnnouncement.php" method="POST">
                             <div class="mb-3 form-floating">
-                                <input class="form-control" type="text" name="Post" id="Post" required placeholder="Post">
-                                <label for="Post">Post:</label>
+                                <input class="form-control" type="text" name="Ann_title" id="Ann_title" required placeholder="Title">
+                                <label for="Ann_title">Title:</label>
+                            </div>
+                            <div class="mb-3 form-floating">
+                                <input class="form-control" type="text" name="Desr" id="Desr" required placeholder="No classes today!">
+                                <label for="Desr">Announcement:</label>
                             </div>
 
                             <div class="mb-3 form-floating">
