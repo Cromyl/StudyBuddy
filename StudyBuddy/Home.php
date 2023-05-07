@@ -275,60 +275,93 @@ h2.effect{
 
 
 
-<div class="category-name">Basic Cards</div> <br/>
+<div class="category-name" >Creators</div> <br/>
             
-        <div class="card-category-1">
+        <div class="card-category-1" style="width: 80%;margin-left: 10%;">
             
-            <div class="basic-card basic-card-aqua">
-                <div class="card-content">
-                    <span class="card-title">Card Title</span>
+            <div class="basic-card basic-card-light" style="justify-content:center">
+                <div class="card-content" style="margin-left: 20%;padding:0%">
+                    <span class="card-title">Shruti Bilolikar</span>
                     <p class="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        <!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. -->
                     </p>
+                    <hr>
+                    <div class="row-lg-2 ">
+                    <a href="https://github.com/ShrutiBilolikar"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-github" style="color:black"></i></div></a>
+                    <a href="https://www.linkedin.com/in/shruti-bilolikar-04659422b/"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-linkedin" style="color:black"></i></div></a>
+                    <a href="https://www.instagram.com/shruti_8403/"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-instagram" style="color:black"></i></div></a>
+        </div>
                 </div>
 
-                <div class="card-link">
-                    <a href="#" title="Read Full"><span>Read Full</span></a>
-                </div>
+                
             </div>
 
-            <div class="basic-card basic-card-lips">
-                <div class="card-content">
-                    <span class="card-title">Card Title</span>
+            <div class="basic-card basic-card-light" style="justify-content:center">
+                <div class="card-content" style="margin-left: 20%;padding:0%">
+                    <span class="card-title">Radhika Gupta</span>
                     <p class="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        <!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. -->
                     </p>
+                    <hr>
+                    <div class="row-lg-2 ">
+                    <a href="https://github.com/radhikag970"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-github" style="color:black"></i></div></a>
+                    <a href="https://www.linkedin.com/in/radhika-gupta-24814623a/"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-linkedin" style="color:black"></i></div></a>
+                    <a href="https://www.instagram.com/radhikag970/"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-instagram" style="color:black"></i></div></a>
+        </div>
                 </div>
 
-                <div class="card-link">
-                    <a href="#" title="Read Full"><span>Read Full</span></a>
-                </div>
+                
             </div>
 
-            <div class="basic-card basic-card-light">
-                <div class="card-content">
-                    <span class="card-title">Card Title</span>
+            <div class="basic-card basic-card-light" style="justify-content:center">
+                <div class="card-content" style="margin-left: 20%;padding:0%">
+                    <span class="card-title">Viraj Jagtap</span>
                     <p class="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        <!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. -->
                     </p>
+                    <hr>
+                    <div class="row-lg-2 ">
+                    <a href="https://github.com/VirajJagtap001"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-github" style="color:black"></i></div></a>
+                    <a href="https://www.linkedin.com/in/viraj-jagtap-3768a0223/"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-linkedin" style="color:black"></i></div></a>
+                    <a href="https://www.instagram.com/viraj__vrj/"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-instagram" style="color:black"></i></div></a>
+        </div>
                 </div>
 
-                <div class="card-link">
-                    <a href="#" title="Read Full"><span>Read Full</span></a>
-                </div>
+                
             </div>
 
-            <div class="basic-card basic-card-dark">
-                <div class="card-content">
-                    <span class="card-title">Card Title</span>
+            <div class="basic-card basic-card-light" style="justify-content:center">
+                <div class="card-content" style="margin-left: 20%;padding:0%">
+                    <span class="card-title">Kaushik Mullick</span>
                     <p class="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        <!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. -->
                     </p>
+                    <hr>
+                    <div class="row-lg-2 ">
+                    <a href="https://github.com/Cromyl"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-github" style="color:black"></i></div></a>
+                    <a href="https://www.linkedin.com/in/kaushik-mullick-0b575b217/"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-linkedin" style="color:black"></i></div></a>
+                    <a href="https://www.instagram.com/kaushik.mullick/"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-instagram" style="color:black"></i></div></a>
+        </div>
                 </div>
 
-                <div class="card-link">
-                    <a href="#" title="Read Full"><span>Read Full</span></a>
+                
+            </div>
+
+            <div class="basic-card basic-card-light" style="justify-content:center">
+                <div class="card-content" style="margin-left: 20%;padding:0%">
+                    <span class="card-title">Soumik Karmakar</span>
+                    <p class="card-text">
+                        <!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. -->
+                    </p>
+                    <hr>
+                    <div class="row-lg-2 ">
+                    <a href="https://github.com/KarmaKar6"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-github" style="color:black"></i></div></a>
+                    <a href="#!"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-linkedin" style="color:black"></i></div></a>
+                    <a href="https://www.instagram.com/soumikkr6/"><div class="feature  bg-gradient text-white rounded-3 mb-3"><i class="bi bi-instagram" style="color:black"></i></div></a>
+        </div>
                 </div>
+
+                
             </div>
             
         </div>
