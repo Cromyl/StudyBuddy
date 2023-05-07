@@ -240,13 +240,13 @@ body{
                         <div class="d-flex " style="justify-content:center">
                             <div class="ms-4">
                                 <div class="d-flex flex-row " style="justify-content:center">
-                                    <div class="p-2"><i class="bi bi-chat-right-quote-fill text-primary fs-1" ></i></div>
+                                    <div class="p-2"><i class="bi bi-chat-right-quote-fill text-primary fs-2" ></i></div>
                                     <!-- Add a form for the delete button -->
-                                         <div class="p-2" style="margin-top: 0.7rem "><h5 class="mb-1"><b><?php echo $row['Post'];?> </b></h5></div>
-                                        
+                                         <div class="p-2" style="margin-top: 0.7rem "><h5 class="mb-1"><b><?php echo $row['Ann_title'];?> </b></h5><?php echo $row['Desr'];?></div>
+                                    
                                 </div>
                                 <?php 
-                                
+                                    
                                     echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Semester: ';
                                     $id=$row['Semester'];
                                     $name=$row['Ann_doer'];

@@ -284,12 +284,12 @@ body{
                 <div class="card mb-4">
                     <div class="card-body p-4 " style="text-align :center">
                         <div class="d-flex" style="justify-content:center">
-                            <div class="ms-4">
+                            <div class="ms-0" style="margin-left:0px">
                                 <div class="d-flex flex-row " style="justify-content:center">
-                                    <div class="p-2"><i class="bi bi-chat-right-quote-fill text-primary fs-1" ></i></div>
+                                    <div class="p-2"><i class="bi bi-chat-right-quote-fill text-primary fs-3" ></i></div>
                                     <!-- Add a form for the delete button -->
-                                         <div class="p-2" style="margin-top: 0.7rem "><h5 class="mb-1"><?php echo $row['Post'];?> </h5></div>
-                                        
+                                         <div class="p-2" style="margin-top: 0.7rem "><h5 class="mb-1"><b><?php echo $row['Ann_title'];?></b><br> </h5><?php echo $row['Desr'];?></div>
+                                        <br>
                                 </div>
                                 <?php 
                                 
@@ -302,7 +302,7 @@ body{
                                 <div class=" " style="justify-content:center">
                                     <form method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this announcement?');">
                                         <input type="hidden" name="delete" value="<?php echo $row['Ann_no']; ?>">
-                                        <button type="submit" class="btn btn-danger " style="width: 70%"><i class="bi bi-trash"></i> Delete</button>
+                                        <button type="submit" class="btn btn-danger " style="width: 400px"><i class="bi bi-trash"></i> Delete</button>
                                     </form>
                                 </div>
                                     
