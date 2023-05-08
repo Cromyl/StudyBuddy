@@ -220,7 +220,7 @@ h2.effect{
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
                         
-                        <div class="card mb-4">
+                        <div class="card mb-4" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                             <div class="card-body p-4">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0"><i class="bi bi-book-fill" style="font-size:30px; height:3rem; color:#0d6efd"></i></div>
@@ -233,8 +233,8 @@ h2.effect{
                             </div>
                         </div>
                         
-                        <div class="card">
-                            <div class="card-body p-4">
+                        <div class="card " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                            <div class="card-body p-4 ">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0"><i class="bi bi-award-fill" style="font-size:30px; height:3rem; color:#0d6efd;"></i></div>
                                     <div class="ms-4">
