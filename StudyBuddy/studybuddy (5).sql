@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2023 at 08:40 AM
+-- Generation Time: May 07, 2023 at 09:08 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -31,21 +31,25 @@ CREATE TABLE `announcement` (
   `Ann_no` int(11) NOT NULL,
   `Semester` int(11) NOT NULL,
   `Ann_doer` varchar(30) NOT NULL,
-  `Post` varchar(100) NOT NULL
+  `Ann_title` varchar(100) NOT NULL,
+  `Desr` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `announcement`
 --
 
-INSERT INTO `announcement` (`Ann_no`, `Semester`, `Ann_doer`, `Post`) VALUES
-(1, 4, 'Venkatesh', 'DBMS Quiz tomorrow'),
-(4, 9, 'Venkatesh', 'Suspend all academic activities from 16.04.23'),
-(5, 4, 'Venkatesh', 'announcement 1'),
-(6, 4, 'Venkatesh', 'annoucement 2'),
-(7, 4, 'Venkatesh', 'dafadsd'),
-(8, 4, 'Venkatesh', 'sdaasdasd'),
-(9, 4, 'Venkatesh', 'asdasdad');
+INSERT INTO `announcement` (`Ann_no`, `Semester`, `Ann_doer`, `Ann_title`, `Desr`) VALUES
+(1, 4, 'Venkatesh', 'DBMS Quiz tomorrow', 'This is the announcement Description.'),
+(4, 9, 'Venkatesh', 'Suspend all academic activities from 16.04.23', 'This is the announcement Description.'),
+(5, 4, 'Venkatesh', 'announcement 1', 'This is the announcement Description.'),
+(6, 3, 'Venkatesh', 'annoucement 2', 'This is the announcement Description.'),
+(7, 4, 'Venkatesh', 'dafadsd', 'This is the announcement Description.'),
+(8, 4, 'Venkatesh', 'sdaasdasd', 'This is the announcement Description.'),
+(9, 4, 'Venkatesh', 'asdasdad', 'This is the announcement Description.'),
+(10, 4, 'Venkatesh', 'Regarding evaluation', 'There will be DBMS mini project evaluation tomorrow 11.05.2021 from 12noon to 5pm. So be ready!'),
+(11, 3, 'Junaid', 'Regarding copy showing of C2', 'C2 copies will not me shown as told by Maity Sir. Those who have problem regarding it can directly contact Maity Sir.'),
+(12, 2, 'Venkatesh', 'new announcement', 'this is the most crucial announcement for testing of the application wether it is working or not');
 
 -- --------------------------------------------------------
 
@@ -68,7 +72,8 @@ CREATE TABLE `doubt` (
 
 INSERT INTO `doubt` (`D_Id`, `Poster_id`, `Subject`, `Semester`, `Doubt`, `D_Name`) VALUES
 (1, 'IIT2021168', 'DBMS', 4, 'What is 3NF?', '3NF'),
-(2, 'IIT2021168', 'SE', 4, 'Why is software engineering necessary?', 'SE Question 1');
+(2, 'IIT2021168', 'SE', 4, 'Why is software engineering necessary?', 'SE Question 1'),
+(3, 'IIT2021168', 'CN', 4, 'zxczxczxczxczxczxc', 'czczxc');
 
 -- --------------------------------------------------------
 
@@ -91,7 +96,9 @@ CREATE TABLE `mentor` (
 INSERT INTO `mentor` (`Id`, `Name`, `Type`, `Password`, `Email`) VALUES
 ('ADMIN001', 'Abdullah', 'A', 'ADMIN001', ''),
 ('PROIT001', 'Venkatesh', 'P', 'PROIT001', ''),
-('PROIT002', 'Aman Kumar', 'T', 'aman', 'iit2021170@iiita.ac.in');
+('PROIT002', 'Aman Kumar', 'T', 'aman', 'iit2021170@iiita.ac.in'),
+('PROIT005', 'dfsd', 'T', 'dd', 'sdss@iiita.ac.in'),
+('TATIT002', 'Junaid', 'T', 'TATIT002', 'tatit002@iiita.ac.in');
 
 -- --------------------------------------------------------
 
@@ -142,7 +149,17 @@ INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `msg`) V
 (29, 'PROIT001', 'IIT2021168', 'chalega??'),
 (30, 'IIT2021170', 'IIT2021168', 'hhhhhh'),
 (31, 'ADMIN001', 'IIT2021168', 'dfdfdf'),
-(32, 'IIT2021170', 'IIT2021168', 'hello mc');
+(32, 'IIT2021170', 'IIT2021168', 'hello mc'),
+(33, 'IIT2021170', 'IIT2021168', 'gfgfdg'),
+(34, 'IIT2021168', 'PROIT001', 'nhi chalgenge'),
+(35, 'IIT2021172', 'PROIT001', 'hello beta kaisi ho'),
+(36, 'IIT2021168', 'PROIT001', 'dfdfdfdfdf'),
+(37, 'IIT2021168', 'PROIT001', 'fgdfgdf'),
+(38, 'IIT2021170', 'PROIT001', 'piya re'),
+(39, 'PROIT001', 'IIT2021168', 'fdf'),
+(40, 'IIT2021168', 'TATIT002', 'hi'),
+(41, 'TATIT002', 'IIT2021168', 'hello'),
+(42, 'IIT2021168', 'TATIT002', 'kaisa j');
 
 -- --------------------------------------------------------
 
@@ -156,20 +173,27 @@ CREATE TABLE `solution` (
   `Q_no` int(11) NOT NULL,
   `Answerer_id` varchar(10) NOT NULL,
   `Answerer` varchar(30) NOT NULL,
-  `Answer` varchar(100) NOT NULL
+  `Answer` varchar(100) NOT NULL,
+  `TaUID` varchar(8) DEFAULT NULL,
+  `ProfUID` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `solution`
 --
 
-INSERT INTO `solution` (`Q_Id`, `Ans_no`, `Q_no`, `Answerer_id`, `Answerer`, `Answer`) VALUES
-('1_1', 1, 1, 'IIT2021168', 'Kaushik', 'Please answer @sir'),
-('1_2', 2, 1, 'IIT2021168', 'Kaushik', '3nf is another form of decomposition'),
-('1_3', 3, 1, '', '', '3nf is something'),
-('2_1', 1, 2, '', '', 'hello world'),
-('2_2', 2, 2, 'IIT2021168', 'Kaushik Mullick', 'ha ye krlo pahle'),
-('2_3', 3, 2, 'IIT2021168', 'Kaushik Mullick', 'zxczxcz');
+INSERT INTO `solution` (`Q_Id`, `Ans_no`, `Q_no`, `Answerer_id`, `Answerer`, `Answer`, `TaUID`, `ProfUID`) VALUES
+('1_1', 1, 1, 'IIT2021168', 'Kaushik', 'Please answer @sir', NULL, NULL),
+('1_2', 2, 1, 'IIT2021168', 'Kaushik', '3nf is another form of decomposition', NULL, NULL),
+('1_3', 3, 1, 'TATIT001', 'Junaid', '3nf is something', NULL, NULL),
+('1_4', 4, 1, 'IIT2021168', 'Kaushik', 'tthis is tje aanswer', NULL, 'PROIT001'),
+('1_5', 5, 1, 'TATIT001', 'Junaid', 'Above all answers are correct', NULL, NULL),
+('1_6', 6, 1, 'PROIT001', 'Venkatesh', 'Heyy!!', NULL, NULL),
+('1_7', 7, 1, 'PROIT001', 'Venkatesh', '3NF is very good', NULL, NULL),
+('2_1', 1, 2, 'PROIT001', 'Venkatesh', 'this is the answer', NULL, NULL),
+('2_2', 2, 2, 'IIT2021168', 'Kaushik Mullick', 'this is the answe', NULL, 'PROIT001'),
+('2_3', 3, 2, 'IIT2021168', 'Kaushik Mullick', 'this is hte answer that is the need pf the humanity f te people of the sum', NULL, NULL),
+('2_4', 4, 2, 'IIT2021168', 'Kaushik Mullick', 'that is the need ogf the people of the humanity that is the need ogf the people of the humanity that', NULL, 'PROIT001');
 
 -- --------------------------------------------------------
 
@@ -192,7 +216,8 @@ CREATE TABLE `student` (
 INSERT INTO `student` (`Rollno`, `Name`, `Semester`, `Password`, `Email`) VALUES
 ('IIT2021168', 'Kaushik Mullick', 4, 'IIT2021168', 'iit2021168@iiita.ac.in'),
 ('IIT2021170', 'Viraj Jagtap', 4, 'viraj', 'IIT2021170@iiita.ac.in'),
-('IIT2021172', 'Shruti', 3, 'IIT2021172', 'iit2021172@iiita.ac.in');
+('IIT2021172', 'Shruti', 3, 'IIT2021172', 'iit2021172@iiita.ac.in'),
+('IIT2021177', 'fellow', 5, 'fellow', 'iit2021177@iiita.ac.in');
 
 --
 -- Indexes for dumped tables
@@ -242,13 +267,13 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `announcement`
 --
 ALTER TABLE `announcement`
-  MODIFY `Ann_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `Ann_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
