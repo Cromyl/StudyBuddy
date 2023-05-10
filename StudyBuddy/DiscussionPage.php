@@ -1,5 +1,6 @@
 <?php
-    $conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
+    //$conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
+    include_once('connection.php');
      $query="SELECT * FROM Doubt";
      $result=mysqli_query($conn,$query);
 ?>

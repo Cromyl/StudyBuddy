@@ -1,9 +1,10 @@
 <?php 
   session_start();
-  $conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
-  if(!isset($_SESSION['uid'])){
-    header("location: login.php");
-  }
+  //$conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
+  include_once('../connection.php');
+  // if(!isset($_SESSION['uid'])){
+  //   header("location: login.php");
+  // }
 ?>
 <?php  include_once "header.php"; ?>
 <head>

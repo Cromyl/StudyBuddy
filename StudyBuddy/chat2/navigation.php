@@ -23,7 +23,7 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <style>
             @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
@@ -208,8 +208,11 @@ body{
 .position{
     position:fixed;
     top:0;
+    background-color: black;
+    color: white;
     width: 100%;
     height: 10%;
+    padding-left: 40px;
     /* z-index: -10; */
 }
 </style>
@@ -219,7 +222,7 @@ body{
   flex-wrap: wrap;">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark position">
             <div class="container px-5">
-            <a class="navbar-brand" href="/StudyBuddy/StudyBuddy/index.php" style="font-size:40px; font-weight:bold;">StudyBuddy</a>
+            <a class="navbar-brand" href="/StudyBuddy/StudyBuddy/index.php" style="font-size:40px; font-weight:bold;color: white;">StudyBuddy</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 </div>

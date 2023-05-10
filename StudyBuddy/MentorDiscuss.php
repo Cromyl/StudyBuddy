@@ -1,6 +1,7 @@
 <?php
     session_start();
-    $conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
+    //$conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
+    include_once('connection.php');
     $id=$_SESSION['uid'];
     $sql="SELECT * FROM Mentor WHERE Id='$id'";
     $query=mysqli_query($conn,$sql);
