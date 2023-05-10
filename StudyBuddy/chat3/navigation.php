@@ -208,8 +208,10 @@ body{
 .position{
     position:fixed;
     top:0;
+    background-color: black;
     width: 100%;
     height: 10%;
+    padding-left: 40px;
     /* z-index: -10; */
 }
 </style>

@@ -1,5 +1,6 @@
 <?php
-    $conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
+    //$conn=mysqli_connect('localhost','root','','studybuddy') or die("Connection failed" .mysqli_connect_error());
+    include_once('connection.php');
     session_start();
     $temp=$_SESSION['uid'];
     $sql="SELECT * FROM Student WHERE Rollno='$temp'";

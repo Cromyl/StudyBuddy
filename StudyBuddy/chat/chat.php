@@ -1,6 +1,7 @@
 <?php 
   session_start();
-  include_once "php/config.php";
+  //include_once "php/config.php";
+  include_once('../connection.php');
   if(!isset($_SESSION['uid'])){
     header("location: login.php");
   }
