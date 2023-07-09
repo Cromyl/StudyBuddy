@@ -15,7 +15,7 @@
         $deleteQuery = "DELETE FROM Announcement WHERE Ann_no = '$deleteId'";
         $deleteResult = mysqli_query($conn, $deleteQuery);
         if($deleteResult) {
-            header("Location: MentorAnnounce.php");
+            header("Location: MentorDiscuss.php");
             exit;
         } else {
             echo "Error deleting announcement: " . mysqli_error($conn);
