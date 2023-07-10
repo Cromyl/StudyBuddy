@@ -12,13 +12,15 @@
 
     if(isset($_POST['delete'])) {
         $deleteId = $_POST['delete'];
-        $deleteQuery = "DELETE FROM Announcement WHERE Ann_no = '$deleteId'";
+        $deleteQuery = "DELETE FROM Doubt WHERE D_Id = '$deleteId'";
         $deleteResult = mysqli_query($conn, $deleteQuery);
+        $deleteQuery2 = "DELETE FROM Solution WHERE Q_No = '$deleteId'";
+        $deleteResult2 = mysqli_query($conn, $deleteQuery2);
         if($deleteResult) {
-            header("Location: MentorAnnounce.php");
+            header("Location: MentorDiscuss.php");
             exit;
         } else {
-            echo "Error deleting announcement: " . mysqli_error($conn);
+            echo "Error deleting discussion: " . mysqli_error($conn);
         }
     }
 
